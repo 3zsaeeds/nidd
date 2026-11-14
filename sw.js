@@ -1,6 +1,6 @@
 // نِدّ: التخزين المؤقت + تنبيهات OneSignal
 try { importScripts('https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js'); } catch (e) {}
-var C = 'nidd-a0c7168f';
+var C = 'nidd-d8c97799';
 var CORE = ['/', '/manifest.webmanifest', '/config.js', '/icons/icon-192.png', '/icons/apple-touch-icon.png'];
 self.addEventListener('install', function (e) { self.skipWaiting(); e.waitUntil(caches.open(C).then(function (c) { return c.addAll(CORE); }).catch(function () {})); });
 self.addEventListener('activate', function (e) {

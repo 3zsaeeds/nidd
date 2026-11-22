@@ -1,7 +1,7 @@
 // نِدّ: التخزين المؤقت + تنبيهات OneSignal
 // v3.1.1 (C8): النسخة المخزنة تنعرض فورًا وتتجدد بالخلفية · (W1): ما نخزّن إلا الردود السليمة (res.ok)
 try { importScripts('https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js'); } catch (e) {}
-var V = 'a46627ab', C = 'nidd-' + V;
+var V = '2ab38c3d', C = 'nidd-' + V;
 var CORE = ['/', '/manifest.webmanifest', '/config.js', '/icons/icon-192.png', '/icons/apple-touch-icon.png'];
 self.addEventListener('install', function (e) {
   self.skipWaiting();

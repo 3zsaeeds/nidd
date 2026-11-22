@@ -22,8 +22,8 @@
   <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/splash-828x1792.png">
   <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/splash-1242x2208.png">
   <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/splash-750x1334.png">
-  <script>window.NIDD_V = 'a46627ab';</script>
-  <script src="/config.js?v=a46627ab"></script>
+  <script>window.NIDD_V = '2ab38c3d';</script>
+  <script src="/config.js?v=2ab38c3d"></script>
   <script>
   (function () {
     if (window.NIDD_OS) {
@@ -647,6 +647,7 @@ button.v-card{appearance:none;font:inherit;text-align:right;width:100%;display:f
 .ob-news b{font-size:17px}.ob-news ul{margin:2px 0;padding-inline-start:18px;font-size:14px;line-height:1.6;color:#D7DCE8}
 /* v3.1 */
 .v-day .day-foot{position:sticky;bottom:0;padding:10px 0 calc(10px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--bg) 30%);margin-top:4px;z-index:5}
+.day-hint{display:flex;gap:8px;align-items:flex-start;background:#1A2036;border:1px solid #2E3549;border-radius:14px;padding:10px 12px;margin:8px 0 10px;font-size:13px;line-height:1.6;color:#C9CFDB}.day-hint>.ti{font-size:17px;color:#7FB2FF;margin-top:2px}.day-hint .ti-grip-vertical{font-size:14px;vertical-align:-2px}
 .v-day .day-foot .v-btn{width:100%;white-space:nowrap}
 .ss-cardio{appearance:none;display:flex;align-items:center;gap:8px;width:100%;padding:9px 12px;border-radius:12px;border:1px dashed #FF4D8D66;background:#FF4D8D14;color:#F3F5FA;font:inherit;font-size:14px;text-align:start}
 .ss-cardio .ti{color:#FF4D8D}
@@ -802,6 +803,8 @@ var Calc = (function () {
     f.dP = f.protein - bal.protein; f.dC = f.carbs - bal.carbs; f.dF = f.fat - bal.fat;
     return f;
   }
+  /** v3.1.2 (D3): يوم راحة كاملة؟ الافتراضي السبت إذا المستخدم ما اختار */
+  function isFullRest(st, wd) { var r = st && Array.isArray(st.restFull) ? st.restFull : [6]; return r.map(Number).indexOf(+wd) >= 0; }
   /** عدد أيام التمرين اللي تنحسب عليه السعرات والأسبوع (نفس الرقم في كل الشاشات) */
   function schedDays(st) {
     st = st || {};
@@ -1039,8 +1042,9 @@ var Calc = (function () {
       };
     } else {
       var todayAct = all.filter(function (s) { return s.date === today && s.dayId === 'act'; });
-      card = { type: wd === 6 ? 'full-rest' : 'active-rest', done: !!dates[today] || !!todayAct.length, acts: todayAct,
-        options: wd === 6 ? [] : [{ dev: 'treadmill', txt: 'مشي مائل 30–40 د' }, { dev: 'bike', txt: 'دراجة 30 د' }], eff: '3–5' };
+      var fr = isFullRest(st, wd);
+      card = { type: fr ? 'full-rest' : 'active-rest', done: !!dates[today] || !!todayAct.length, acts: todayAct,
+        options: fr ? [] : [{ dev: 'treadmill', txt: 'مشي مائل 30–40 د' }, { dev: 'bike', txt: 'دراجة 30 د' }], eff: '3–5' };
     }
 
     // الوزن واتجاهه
@@ -1363,7 +1367,7 @@ var Calc = (function () {
 
   return {
     toolize: toolize, sameMove: sameMove, subReason: subReason, coverage: coverage, headsOf: headsOf, slotOf: function (id) { return SLOT_OF[id]; }, TOOL_AR: TOOL_AR, slug: slug,
-    inc: inc, suggest: suggest, recommend: recommend, cardioGoal: cardioGoal, ACTS: ACTS, ACT_AR: ACT_AR, SPORTS: SPORTS, actMet: actMet, dayKind: dayKind, beginnerSets: beginnerSets, factor: factor, bmr: bmr, targets: targets, foodPlan: foodPlan, schedDays: schedDays, needsRefresh: needsRefresh,
+    inc: inc, suggest: suggest, recommend: recommend, cardioGoal: cardioGoal, ACTS: ACTS, ACT_AR: ACT_AR, SPORTS: SPORTS, actMet: actMet, dayKind: dayKind, beginnerSets: beginnerSets, factor: factor, bmr: bmr, targets: targets, foodPlan: foodPlan, schedDays: schedDays, isFullRest: isFullRest, needsRefresh: needsRefresh,
     cardioMet: cardioMet, liftMet: liftMet, kcal: kcal, load: load, strainOf: strainOf, dayStrain: dayStrain, strainLabel: strainLabel,
     RPE_WORDS: RPE_WORDS, CARDIO: CARDIO, applySession: applySession, progress: progress, cardioEntries: cardioEntries, home: home, cardioPlan: cardioPlan, weekStart: weekStart
   };
@@ -1455,7 +1459,7 @@ function refreshView() {
 }
 /** v3.1 (B3): أسئلة البداية تبان فورًا على الجوال، والسيرفر يوصله بالخلفية */
 function applyOnboard(v, p, at) {
-  var day = ymd(new Date(at || Date.now())), st = v.settings = v.settings || {};
+  var day = dayOf(at || Date.now()), st = v.settings = v.settings || {};
   ['goal', 'level', 'days', 'active', 'mode'].forEach(function (k) { if (p[k] !== undefined) st[k] = p[k]; });
   st.active = p.active ? 1 : 0; st.calcW = +p.weight; st.onboarded = day;
   if (p.tools && p.tools.length) st.tools = clone(p.tools);
@@ -1493,7 +1497,11 @@ function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function
 function pj(o) { return esc(JSON.stringify(o)); }
 function ic(n, cls) { return '<i class="ti ti-' + n + ' ' + (cls || '') + '" aria-hidden="true"></i>'; }
 function pad(n) { return (n < 10 ? '0' : '') + n; }
-function ymd(d) { d = d || new Date(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+/* v3.1.2 (D1): اليوم ينتهي الساعة 4 الفجر. أي شي قبلها يتبع اليوم اللي قبله */
+var DAY_CUT = 4 * 36e5;
+function lnow() { return new Date(Date.now() - DAY_CUT); }
+function dayOf(t) { return ymd(new Date(+t - DAY_CUT)); }
+function ymd(d) { d = d || lnow(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
 function parseYmd(s) { var p = String(s).split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
 function daysBetween(a, b) { return Math.round((parseYmd(b) - parseYmd(a)) / 864e5); }
 function fmtN(n) { return Math.round(+n || 0).toLocaleString('en-US'); }
@@ -1900,7 +1908,7 @@ function confirmSheet(title, text, okLabel, act, attrs, danger) {
 
 /* ===================== حسابات ===================== */
 function weekCount() {
-  var n = new Date(), sun = new Date(n.getFullYear(), n.getMonth(), n.getDate() - n.getDay()), from = ymd(sun);
+  var n = lnow(), sun = new Date(n.getFullYear(), n.getMonth(), n.getDate() - n.getDay()), from = ymd(sun);
   return (S.boot.sessions || []).filter(function (s) { return s.date >= from && s.dayId !== 'act'; }).length;
 }
 function trainDays() { var s = S.boot.settings.schedule || {}, n = 0; for (var k in s) if (s[k]) n++; return n; }
@@ -1910,7 +1918,7 @@ function todayPlan() {
   var sch = b.settings.schedule || {}, has = Object.keys(sch).some(function (k) { return sch[k]; });
   var day = null, rest = false;
   if (has) {
-    var id = sch[new Date().getDay()];
+    var id = sch[lnow().getDay()];
     day = p.filter(function (d) { return d.id === id; })[0] || null;
     rest = !day;
   } else {
@@ -2119,7 +2127,7 @@ function todayCard(h) {
       '<div class="tc-meta">صمّم برنامجك بنفسك، أو اختر برنامج جاهز وعدّل عليه</div>' +
       '<button class="tc-go" data-act="go" data-to="choose">اختر برنامج ' + ic('chevron-left') + '</button></section>';
   }
-  var dayLbl = 'اليوم · ' + WD[new Date().getDay()];
+  var dayLbl = 'اليوم · ' + WD[lnow().getDay()];
   if (c.type === 'train') {
     var cp = c.cardio || {}, cl = cp.before ? 'قبلها ' + cp.before.txt : cp.after ? 'بعدها ' + cp.after.txt : '';
     var hint = '';
@@ -2130,9 +2138,9 @@ function todayCard(h) {
         x.mode === 'down' ? nm + ': آخر مرة ' + fw(x.last) + ' كجم · خفّف اليوم لـ ' + fw(x.w) :
           nm + ': آخر مرة ' + fw(x.last) + ' كجم · كرّر نفس الوزن';
     }
-    return '<section class="tcard train"><div class="tc-head"><div><div class="tc-sub">' + (h.isNew ? 'أول تمرين لك · ' + WD[new Date().getDay()] : dayLbl) + '</div>' +
+    return '<section class="tcard train"><div class="tc-head"><div><div class="tc-sub">' + (h.isNew ? 'أول تمرين لك · ' + WD[lnow().getDay()] : dayLbl) + '</div>' +
       '<div class="tc-title en">' + esc(c.name) + '</div></div>' +
-      (h.isNew ? '' : '<button class="tc-edit" data-act="go" data-to="day" data-p=\'' + pj({ id: c.dayId }) + '\'>' + ic('pencil') + 'تعديل اليوم</button>') + '</div>' +
+      (h.isNew ? '' : '<button class="tc-edit" data-act="go" data-to="day" data-p=\'' + pj({ id: c.dayId }) + '\' aria-label="تعديل تمارين اليوم في برنامجك">' + ic('pencil') + 'تعديل اليوم</button>') + '</div>' +
       '<div class="tc-meta">' + exCount(c.count) + ' · ' + c.estMin + ' د' + (cl ? ' · ' + cl : '') + (c.done ? ' · أنجزته اليوم ✅' : '') + '</div>' +
       (hint ? '<div class="tc-hint">' + hint + '</div>' : '') +
       '<button class="tc-go" data-act="startDay" data-day="' + esc(c.dayId) + '">' + (h.isNew ? 'ابدأ أول تمرين' : 'ابدأ التمرين') + ' ' + ic('player-play-filled') + '</button></section>';
@@ -2161,7 +2169,7 @@ function todayCard(h) {
 }
 /** أقرب يوم تمرين جاي في الجدول (أو أول يوم في البرنامج) */
 function nextTrainDay() {
-  var sch = (S.boot.settings || {}).schedule || {}, prog = S.boot.program || [], wd = new Date().getDay();
+  var sch = (S.boot.settings || {}).schedule || {}, prog = S.boot.program || [], wd = lnow().getDay();
   for (var k = 1; k <= 7; k++) {
     var id = sch[(wd + k) % 7], d = id && prog.filter(function (x) { return x.id === id; })[0];
     if (d && (d.items || []).length) return d;
@@ -2169,7 +2177,7 @@ function nextTrainDay() {
   return prog.filter(function (x) { return (x.items || []).length; })[0] || null;
 }
 function nextTrainName() {
-  var sch = (S.boot.settings || {}).schedule || {}, wd = (new Date().getDay() + 1) % 7, d = sch[wd] && (S.boot.program || []).filter(function (x) { return x.id === sch[wd]; })[0];
+  var sch = (S.boot.settings || {}).schedule || {}, wd = (lnow().getDay() + 1) % 7, d = sch[wd] && (S.boot.program || []).filter(function (x) { return x.id === sch[wd]; })[0];
   return d ? d.name : '';
 }
 
@@ -2434,7 +2442,7 @@ function saveSettingsLocal(obj) {
 SC.program = function () {
   var b = S.boot, p = b.program || [];
   if (!p.length) return SC.choose();
-  var sch = b.settings.schedule || {}, today = new Date().getDay(), ws = Calc.weekStart(ymd());
+  var sch = b.settings.schedule || {}, today = lnow().getDay(), ws = Calc.weekStart(ymd());
   var done = {};
   (b.sessions || []).forEach(function (s) { if (s.date >= ws) done[s.dayId + '|' + daysBetween(ws, s.date)] = 1; });
   var nd = Object.keys(sch).filter(function (k) { return sch[k]; }).length;
@@ -2442,7 +2450,7 @@ SC.program = function () {
   var rows = [0, 1, 2, 3, 4, 5, 6].map(function (i) {
     var d = p.filter(function (x) { return x.id === sch[i]; })[0];
     if (!d) {
-      var full = i === 6;
+      var full = Calc.isFullRest(b.settings, i);
       return '<button class="pd rest" data-act="schedPick" data-wd="' + i + '"><span class="grow"><span class="vt-l">' + WD[i] + '</span><b>' + (full ? 'راحة كاملة' : 'راحة نشطة') + '</b><span class="vt-l">' + (full ? 'استرجاع' : 'مشي خفيف 30–40 د') + '</span></span>' + ic('chevron-left', 'mut') + '</button>';
     }
     var isT = i === today, ok = done[d.id + '|' + i];
@@ -2467,7 +2475,9 @@ SC.day = function (pa) {
   if (!d) return SC.program();
   S.tab.day = d.id;
   return '<div class="v-day">' + topbar('<span class="en">' + esc(d.name) + '</span>', { right: '<button class="icon-btn" data-act="dayMenu" data-day="' + d.id + '" aria-label="خيارات اليوم">' + ic('dots') + '</button>' }) +
-    '<div class="vt-l">' + exCount(d.items.length) + ' · ' + estMin(d) + ' دقيقة · اسحب ' + ic('grip-vertical') + ' عشان ترتّب</div>' +
+    '<div class="vt-l">' + exCount(d.items.length) + ' · ' + estMin(d) + ' دقيقة</div>' +
+    // v3.1.2 (D5): وش يسوي «تعديل اليوم»
+    '<div class="day-hint">' + ic('info-circle') + '<span>هنا تعدّل تمارين <b class="en">' + esc(d.name) + '</b>، والتعديل ينحفظ في برنامجك ويتكرر كل أسبوع: اسحب ' + ic('grip-vertical') + ' ترتّب، واضغط التمرين تغيّر مجموعاته وعدّاته أو تبدّله أو تحذفه.</span></div>' +
     '<div class="ex-list" data-list="prog">' + d.items.map(function (it, i) {
       var e = exOf(it.ex);
       return '<div class="exr" data-drag="prog" data-i="' + i + '"><button class="drag" data-drag-h aria-label="اسحب لترتيب ' + esc(e.name) + '">' + ic('grip-vertical') + '</button>' +
@@ -2507,7 +2517,7 @@ SC.builder = function () {
 
 /* ---------- الجدول ---------- */
 SC.schedule = function (pa) {
-  var b = S.boot, p = b.program || [], sch = b.settings.schedule || {}, today = new Date().getDay();
+  var b = S.boot, p = b.program || [], sch = b.settings.schedule || {}, today = lnow().getDay();
   if (!p.length) return topbar('جدولي') + '<div class="card center mut">اختر برنامج أول، وبعدها رتّب أيامك.</div><button class="btn" data-act="go" data-to="choose">اختر برنامج</button>';
   return topbar('جدولي') +
     (pa.onboard ? actions('<button class="btn" data-act="tabgo" data-to="home">' + ic('check') + ' تمام، خلنا نبدأ</button>') +
@@ -2935,7 +2945,7 @@ SC.summary = function () {
 SC.progress = function () {
   var b = S.boot, per = S.tab.period || 'month', cOnly = (b.settings || {}).mode === 'cardio';
   var kind = cOnly ? 'cardio' : S.tab.ptype || 'iron';
-  var m = Calc.progress(b, ymd(new Date()), per);
+  var m = Calc.progress(b, ymd(), per);
   var labels = m.buckets.map(function (k, i) {
     if (per === 'week') return WD1[k.wd];
     if (per === 'year') return MON[k.mon];
@@ -3084,7 +3094,7 @@ SC.more = function () {
     '<div class="menu">' + items.map(function (x) {
       return '<button data-act="' + (TABS.indexOf(x[0]) >= 0 ? 'tabgo' : 'go') + '" data-to="' + x[0] + '">' + ic(x[1], 'mi') + '<span class="grow">' + x[2] + '</span>' + ic('chevron-left', 'mut') + '</button>';
     }).join('') + '<button data-act="logoutAsk" class="text-danger">' + ic('logout', 'mi') + '<span class="grow">تسجيل الخروج</span></button></div>' +
-    '<div class="center xs mut"><span class="en">Nidd v3.1 · All You Nidd</span></div>' + nav('more');
+    '<div class="center xs mut"><span class="en">Nidd v3.1.2 · All You Nidd</span></div>' + nav('more');
 };
 
 SC.feedback = function () {
@@ -3305,7 +3315,7 @@ var ACT = {
     }
     var st = todayStrainWith([{ rpe: item.rpe || 5, min: item.min }]);
     var started = a.start || (Date.now() - item.min * 60000);
-    var payload = { id: 'a' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), date: ymd(new Date(started)), dayId: 'act', dayName: item.name, startedAt: started, duration: item.min, sets: [], cardio: [item] };
+    var payload = { id: 'a' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), date: dayOf(started), dayId: 'act', dayName: item.name, startedAt: started, duration: item.min, sets: [], cardio: [item] };
     if (item.rpe) payload.rpe = item.rpe;
     S.af = null; LS.del('af');
     enqueue('session', payload, 's:' + payload.id);
@@ -3734,12 +3744,20 @@ var ACT = {
     var wd = el.dataset.wd;
     openSheet('<h2>' + WD[wd] + '</h2><div class="col">' + (S.boot.program || []).map(function (d) {
       return '<button class="list-item" data-act="schedSet" data-wd="' + wd + '" data-day="' + d.id + '"><div class="thumb" style="background:#FF3B8D22;color:#FF3B8D">' + ic('barbell') + '</div><div class="grow en b" style="text-align:right">' + esc(d.name) + '</div></button>';
-    }).join('') + '<button class="list-item" data-act="schedSet" data-wd="' + wd + '" data-day=""><div class="thumb" style="background:#2E3552;color:#8A93A6">' + ic('zzz') + '</div><div class="grow b">راحة</div></button></div>');
+    }).join('') +
+      // v3.1.2 (D3): لكل يوم: تمرين، أو راحة نشطة، أو راحة كاملة
+      '<button class="list-item" data-act="schedSet" data-wd="' + wd + '" data-day="" data-rest="active"><div class="thumb" style="background:#00E0B822;color:#00E0B8">' + ic('walk') + '</div><div class="grow" style="text-align:right"><b>راحة نشطة</b><div class="xs mut">مشي خفيف أو دراجة 30–40 د</div></div></button>' +
+      '<button class="list-item" data-act="schedSet" data-wd="' + wd + '" data-day="" data-rest="full"><div class="thumb" style="background:#2E3552;color:#8A93A6">' + ic('zzz') + '</div><div class="grow" style="text-align:right"><b>راحة كاملة</b><div class="xs mut">استرجاع، بدون تذكير كارديو</div></div></button></div>');
   },
   schedSet: function (el) {
-    var sch = clone(S.boot.settings.schedule || {});
-    if (el.dataset.day) sch[el.dataset.wd] = el.dataset.day; else delete sch[el.dataset.wd];
-    closeSheet(); enqueue('schedule', { schedule: sch }, 'schedule'); render();
+    var wd = +el.dataset.wd, sch = clone(S.boot.settings.schedule || {});
+    var rf = (Array.isArray(S.boot.settings.restFull) ? S.boot.settings.restFull : [6]).map(Number).filter(function (x) { return x !== wd; });
+    if (el.dataset.day) sch[wd] = el.dataset.day; else delete sch[wd];
+    if (!el.dataset.day && el.dataset.rest === 'full') rf.push(wd);
+    rf.sort();
+    closeSheet(); enqueue('schedule', { schedule: sch }, 'schedule');
+    saveSettingsLocal({ restFull: rf });
+    render();
   },
 
   /* السجل */

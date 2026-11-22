@@ -22,8 +22,8 @@
   <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/splash-828x1792.png">
   <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/splash-1242x2208.png">
   <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/splash-750x1334.png">
-  <script>window.NIDD_V = '2ab38c3d';</script>
-  <script src="/config.js?v=2ab38c3d"></script>
+  <script>window.NIDD_V = '9f46551d';</script>
+  <script src="/config.js?v=9f46551d"></script>
   <script>
   (function () {
     if (window.NIDD_OS) {
@@ -652,6 +652,133 @@ button.v-card{appearance:none;font:inherit;text-align:right;width:100%;display:f
 .ss-cardio{appearance:none;display:flex;align-items:center;gap:8px;width:100%;padding:9px 12px;border-radius:12px;border:1px dashed #FF4D8D66;background:#FF4D8D14;color:#F3F5FA;font:inherit;font-size:14px;text-align:start}
 .ss-cardio .ti{color:#FF4D8D}
 .cf-nohist{padding:10px 12px;border-radius:12px;background:#151A27;border:1px solid #2E3549;font-size:14px;color:#C9CFDB}
+.sub-opts{display:flex;flex-wrap:wrap;gap:8px}.sub-opts .chip{padding:10px 14px;font-size:14px}.sub-me{margin:10px 0 2px}
+
+.sr .cl{touch-action:pan-y}.sr .cl.swp-on{color:#7FB2FF;box-shadow:0 0 0 2px #2F6BFF inset}
+.swp-tip{display:flex;gap:8px;align-items:center;margin:8px 0 2px;padding:8px 10px;border-radius:12px;background:#2F6BFF14;color:#9FC2FF;font-size:12.5px}.swp-tip .ti{font-size:16px}
+/* ===================== v3.2: أنماط الرئيسية السبعة (متغيرات ألوان) ===================== */
+body{--h-bg:radial-gradient(120% 60% at 100% 0%,#2A1240 0%,transparent 55%),radial-gradient(90% 50% at 0% 100%,#0E2A3A 0%,transparent 60%),#0B0E17;--h-tx:#F3F5FA;--h-mut:#9AA3B5;
+  --h-card:linear-gradient(180deg,#171C2B,#121624);--h-bd:1px solid #232A3D;--h-rad:22px;--h-sh:0 10px 24px -14px rgba(0,0,0,.8);--h-blur:none;
+  --h-hero:linear-gradient(135deg,#FF3B8D 0%,#8B3DF0 60%,#3D6BFF 100%);--h-hero-bd:0 solid transparent;--h-hero-sh:0 18px 40px -12px rgba(255,59,141,.55);--h-hero-rad:26px;--h-hero-tx:#fff;--h-hero-sub:rgba(255,255,255,.78);
+  --h-box:rgba(0,0,0,.22);--h-tag:rgba(255,255,255,.18);--h-go-bg:#fff;--h-go-tx:#6A2BD9;--h-go-bd:0 solid transparent;--h-go-sh:none;--h-go-rad:18px;--h-play-bg:#6A2BD9;--h-play-tx:#fff;--h-badge-bg:#fff;--h-badge-tx:#6A2BD9;
+  --h-acc:#FF8A3D;--h-ok:#00E0B8;--h-ring2:#FF3B8D;--h-track:#232A3D;--h-nav:rgba(15,19,32,.92);--h-nav-bd:1px solid #232A3D;--h-font:'IBM Plex Sans Arabic','Tajawal',sans-serif;
+  --h-rest:linear-gradient(135deg,#0E8F7A 0%,#1F5FD1 100%);--h-rest-tx:#fff;--h-av:linear-gradient(135deg,#FF3B8D 0%,#8B3DF0 60%,#3D6BFF 100%);--h-av-tx:#fff;--h-av-rad:22px;--h-band:none}
+body[data-th="light"]{--h-bg:radial-gradient(100% 50% at 100% 0%,#FFE3EE 0%,transparent 60%),radial-gradient(80% 40% at 0% 100%,#E2F4FF 0%,transparent 60%),#F6F7FB;--h-tx:#121626;--h-mut:#6E7587;
+  --h-card:#FFFFFF;--h-bd:1px solid #ECEEF4;--h-rad:24px;--h-sh:0 10px 30px -16px rgba(18,22,38,.25);--h-hero:linear-gradient(135deg,#FF3B8D,#FF8A00);--h-hero-sh:0 18px 34px -14px rgba(255,90,60,.6);--h-hero-rad:28px;--h-hero-sub:rgba(255,255,255,.85);
+  --h-go-tx:#E0306F;--h-go-rad:20px;--h-play-bg:#E0306F;--h-badge-tx:#E0306F;--h-acc:#FF7A1A;--h-ok:#11B886;--h-track:#EEF0F5;--h-nav:rgba(255,255,255,.95);--h-nav-bd:1px solid #ECEEF4;
+  --h-rest:linear-gradient(135deg,#11B886,#2F8BFF);--h-av:linear-gradient(135deg,#FF3B8D,#FF8A00)}
+body[data-th="volt"]{--h-bg:#050505;--h-tx:#FFFFFF;--h-mut:#8A8A8A;--h-card:#101010;--h-bd:1px solid #1F1F1F;--h-rad:8px;--h-sh:none;
+  --h-hero:repeating-linear-gradient(135deg,#C6FF00 0 18px,#B8F000 18px 36px);--h-hero-sh:0 0 40px -10px rgba(198,255,0,.55);--h-hero-rad:12px;--h-hero-tx:#000;--h-hero-sub:#2C3600;--h-box:rgba(0,0,0,.1);--h-tag:rgba(0,0,0,.12);
+  --h-go-bg:#000;--h-go-tx:#C6FF00;--h-go-rad:6px;--h-play-bg:#C6FF00;--h-play-tx:#000;--h-badge-bg:#000;--h-badge-tx:#C6FF00;--h-acc:#C6FF00;--h-ok:#C6FF00;--h-ring2:#FFFFFF;--h-track:#1F1F1F;
+  --h-nav:#050505;--h-nav-bd:1px solid #1F1F1F;--h-font:'Cairo','IBM Plex Sans Arabic',sans-serif;--h-rest:#101010;--h-rest-tx:#fff;--h-av:repeating-linear-gradient(135deg,#C6FF00 0 18px,#B8F000 18px 36px);--h-av-tx:#000;--h-av-rad:8px}
+body[data-th="glass"]{--h-bg:radial-gradient(circle at 90% 8%,#8B3DF0 0,transparent 38%),radial-gradient(circle at 5% 45%,#FF3B8D 0,transparent 35%),radial-gradient(circle at 95% 75%,#00C2FF 0,transparent 38%),radial-gradient(circle at 20% 100%,#FF8A00 0,transparent 30%),#0B0F1A;
+  --h-tx:#FFFFFF;--h-mut:rgba(255,255,255,.7);--h-card:rgba(255,255,255,.09);--h-bd:1px solid rgba(255,255,255,.18);--h-rad:26px;--h-sh:inset 0 1px 0 rgba(255,255,255,.18);--h-blur:blur(20px);
+  --h-hero:rgba(255,255,255,.16);--h-hero-bd:1px solid rgba(255,255,255,.18);--h-hero-sh:inset 0 1px 0 rgba(255,255,255,.35),0 20px 40px -20px rgba(0,0,0,.6);--h-hero-rad:30px;--h-hero-sub:rgba(255,255,255,.8);
+  --h-go-tx:#5B2BD9;--h-go-rad:22px;--h-play-bg:#5B2BD9;--h-badge-tx:#5B2BD9;--h-acc:#FFD27A;--h-ok:#7CFFE0;--h-ring2:#FF9AC8;--h-track:rgba(255,255,255,.15);--h-nav:rgba(11,15,26,.45);--h-nav-bd:1px solid rgba(255,255,255,.18);
+  --h-rest:rgba(255,255,255,.12);--h-av:linear-gradient(135deg,#FF3B8D,#8B3DF0)}
+body[data-th="calm"]{--h-bg:#121318;--h-tx:#EEEFF3;--h-mut:#7D8294;--h-card:#18191F;--h-bd:1px solid #24262F;--h-rad:16px;--h-sh:none;
+  --h-hero:#18191F;--h-hero-bd:1px solid #2A2C36;--h-hero-sh:none;--h-hero-rad:20px;--h-hero-tx:#EEEFF3;--h-hero-sub:#8B90A3;--h-box:rgba(255,255,255,.04);--h-tag:rgba(255,255,255,.08);
+  --h-go-bg:#FF7A3D;--h-go-tx:#121318;--h-go-rad:12px;--h-play-bg:#121318;--h-play-tx:#FF7A3D;--h-badge-bg:#FF7A3D;--h-badge-tx:#121318;--h-acc:#FF7A3D;--h-ok:#FF7A3D;--h-ring2:#FF7A3D;--h-track:#2A2C36;
+  --h-nav:#121318;--h-nav-bd:1px solid #24262F;--h-rest:#18191F;--h-rest-tx:#EEEFF3;--h-av:#18191F;--h-av-tx:#EEEFF3;--h-av-rad:16px}
+body[data-th="bold"]{--h-bg:radial-gradient(#E8D9BC 1.2px,transparent 1.3px) 0 0/16px 16px,#FFF4E0;--h-tx:#111;--h-mut:#4A4A4A;--h-card:#FFFFFF;--h-bd:3px solid #111;--h-rad:16px;--h-sh:4px 4px 0 #111;
+  --h-hero:#FF3B8D;--h-hero-bd:3px solid #111;--h-hero-sh:6px 6px 0 #111;--h-hero-rad:20px;--h-hero-tx:#111;--h-hero-sub:#3A0A1F;--h-box:rgba(0,0,0,.1);--h-tag:rgba(0,0,0,.12);
+  --h-go-bg:#FFD23F;--h-go-tx:#111;--h-go-bd:3px solid #111;--h-go-sh:4px 4px 0 #111;--h-go-rad:12px;--h-play-bg:#111;--h-play-tx:#FFD23F;--h-badge-bg:#FFD23F;--h-badge-tx:#111;--h-acc:#111;--h-ok:#3DDC97;--h-ring2:#00C2FF;--h-track:#F0E6D2;
+  --h-nav:#fff;--h-nav-bd:3px solid #111;--h-font:'Cairo','IBM Plex Sans Arabic',sans-serif;--h-rest:#3DDC97;--h-rest-tx:#111;--h-av:#FF3B8D;--h-av-tx:#111;--h-av-rad:16px}
+body[data-th="saudi"]{--h-bg:radial-gradient(110% 55% at 100% 0%,#0D4A2C 0%,transparent 60%),#06150E;--h-tx:#F4F7F2;--h-mut:#9DB5A6;--h-card:linear-gradient(180deg,#0C2418,#091D13);--h-bd:1px solid #1C3B2A;--h-rad:20px;
+  --h-hero:linear-gradient(135deg,#008A45 0%,#005C2E 100%);--h-hero-sh:0 18px 40px -14px rgba(0,160,80,.55);--h-hero-rad:24px;--h-hero-sub:rgba(255,255,255,.8);
+  --h-go-bg:#F4F7F2;--h-go-tx:#006C35;--h-go-rad:16px;--h-play-bg:#006C35;--h-play-tx:#F4F7F2;--h-badge-bg:#F4F7F2;--h-badge-tx:#006C35;--h-acc:#E0B83A;--h-ok:#3FD68A;--h-ring2:#E0B83A;--h-track:#1C3B2A;
+  --h-nav:#06150E;--h-nav-bd:1px solid #1C3B2A;--h-rest:linear-gradient(135deg,#0C5A35,#06402A);--h-av:linear-gradient(135deg,#008A45 0%,#005C2E 100%);--h-av-rad:20px;
+  --h-band:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14'%3E%3Cpath d='M0 14 7 0l7 14z' fill='%23C9A227'/%3E%3Cpath d='M14 14 21 0l7 14z' fill='%23ffffff' fill-opacity='.9'/%3E%3C/svg%3E") repeat-x}
+body.on-home{background:var(--h-bg);background-attachment:fixed;color:var(--h-tx)}
+body.on-home #app{font-family:var(--h-font)}
+.v-home{color:var(--h-tx)}
+.v-home .v-head{align-items:center}
+.vh-who{display:flex;align-items:center;gap:10px;min-width:0}
+.vh-av{width:44px;height:44px;flex:none;border-radius:var(--h-av-rad);background:var(--h-av);color:var(--h-av-tx);display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:800}
+body[data-th="bold"] .vh-av{border:3px solid #111}
+.v-home .vh-g{color:var(--h-mut)}
+.vh-r{display:flex;gap:8px;align-items:center}
+.vh-bell{appearance:none;width:40px;height:40px;border-radius:var(--h-rad);background:var(--h-card);border:var(--h-bd);box-shadow:var(--h-sh);color:var(--h-mut);display:flex;align-items:center;justify-content:center;font-size:20px;backdrop-filter:var(--h-blur);-webkit-backdrop-filter:var(--h-blur)}
+.v-home .v-badge.fire,.v-home .v-badge.new{background:var(--h-card);border:var(--h-bd);box-shadow:var(--h-sh);color:var(--h-acc);backdrop-filter:var(--h-blur);-webkit-backdrop-filter:var(--h-blur)}
+.v-home .tcard{position:relative;overflow:hidden;background:var(--h-hero);color:var(--h-hero-tx);border:var(--h-hero-bd);box-shadow:var(--h-hero-sh);border-radius:var(--h-hero-rad);backdrop-filter:var(--h-blur);-webkit-backdrop-filter:var(--h-blur)}
+.v-home .tcard.rest{background:var(--h-rest);color:var(--h-rest-tx)}
+.v-home .tcard>*{position:relative}
+.v-home .tcard .tc-sub,.v-home .tcard .tc-meta,.v-home .tcard.rest .tc-sub,.v-home .tcard.rest .tc-meta{color:var(--h-hero-sub)}
+.v-home .tcard.rest .tc-sub,.v-home .tcard.rest .tc-meta{color:inherit;opacity:.85}
+.tc-big{position:absolute!important;left:-14px;top:-18px;font-size:150px;font-weight:900;line-height:1;opacity:.12;direction:ltr;pointer-events:none}
+.tc-band{position:absolute!important;left:0;right:0;bottom:0;height:10px;background:var(--h-band);background-size:28px 10px}
+.tc-tags{display:flex;gap:6px;flex-wrap:wrap}.tc-tags span{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--h-tag)}
+.tc-ic{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:600;color:var(--h-hero-sub)}.tc-ic span{display:flex;align-items:center;gap:4px}.tc-ic .ti{font-size:15px}
+.v-home .tc-hint{align-self:stretch;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border-radius:14px;background:var(--h-box);font-size:12.5px}
+.tc-hint .th-t{display:flex;flex-direction:column;min-width:0}.tc-hint .th-t b{font-size:15px;font-weight:800}
+.tc-up{display:flex;align-items:center;gap:3px;font-size:13px;font-weight:800;padding:5px 9px;border-radius:999px;background:var(--h-badge-bg);color:var(--h-badge-tx);white-space:nowrap}
+.v-home .tc-go{background:var(--h-go-bg);color:var(--h-go-tx);border:var(--h-go-bd);box-shadow:var(--h-go-sh);border-radius:var(--h-go-rad);min-height:54px;font-weight:900}
+.tc-play{width:30px;height:30px;border-radius:50%;background:var(--h-play-bg);color:var(--h-play-tx);display:inline-flex;align-items:center;justify-content:center;font-size:15px}
+.v-home .tcard.rest .tc-go{color:var(--h-go-tx)}
+.v-home .v-card,.v-home .v-tile{background:var(--h-card);border:var(--h-bd);border-radius:var(--h-rad);box-shadow:var(--h-sh);color:var(--h-tx);backdrop-filter:var(--h-blur);-webkit-backdrop-filter:var(--h-blur)}
+.v-home .vt-l,.v-home .vt-s,.v-home .wk-l,.v-home .wk-s span{color:var(--h-mut)}
+.v-home .wk-n{color:var(--h-mut)}
+.v-home .wk-s{border-top-color:var(--h-track)}
+.wk-row{display:flex;align-items:center;gap:12px}.wk-row .wk-g{flex:1}
+.h-ring{position:relative;flex:none;display:flex;align-items:center;justify-content:center}.h-ring svg{transform:rotate(-90deg);display:block}.h-ring b{position:absolute;font-size:15px;font-weight:800;direction:ltr}
+.v-home .wk-c{border-color:var(--h-mut);opacity:.85}
+.v-home .wk-d.w-done .wk-c{background:var(--h-ok);color:#0B0E17;opacity:1}
+body[data-th="bold"] .v-home .wk-d.w-done .wk-c,body[data-th="volt"] .v-home .wk-d.w-done .wk-c{color:#000}
+.v-home .wk-d.w-today .wk-c{border:2.5px solid var(--h-acc);background:transparent;box-shadow:0 0 12px color-mix(in srgb,var(--h-acc) 45%,transparent);opacity:1}
+.v-home .wk-d.w-today .wk-l,.v-home .wk-d.w-today .wk-n{color:var(--h-acc)}
+.v-home .wk-d.w-rt .wk-c{border-color:var(--h-ok);background:transparent}
+.v-home .wk-d.w-rt .wk-l,.v-home .wk-d.w-rt .wk-n{color:var(--h-ok)}
+.v-home .vt-bar{background:var(--h-track)}.v-home .vt-bar i{background:var(--h-ok)}
+.vt-food{flex-direction:row!important;align-items:center;gap:8px!important}
+.vt-spark{display:block;direction:ltr;margin-top:2px}
+.v-home .vt-s.g{color:var(--h-ok)}.v-home .vt-s.o{color:var(--h-acc)}
+.v-home .v-tile.vt-pr{background:var(--h-card);border:var(--h-bd)}
+.v-home .vt-i{background:color-mix(in srgb,var(--h-acc) 18%,transparent);color:var(--h-acc)}
+.v-home .vt-pr .vt-l.o{color:var(--h-mut)}
+body.on-home .nav{background:var(--h-nav);border-top:var(--h-nav-bd);font-family:var(--h-font)}
+body.on-home .nav button.on,body.on-home .nav button.on i{color:var(--h-acc)}
+.nav button{position:relative}
+.nav button.on::before{content:'';position:absolute;top:-8px;width:28px;height:3px;border-radius:0 0 3px 3px;background:currentColor;box-shadow:0 0 10px currentColor}
+/* المظهر */
+.th-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.th-card{appearance:none;border:2px solid var(--c2);border-radius:18px;padding:0;overflow:hidden;background:var(--c1);color:var(--tx);font:inherit;text-align:right;display:flex;flex-direction:column}
+.th-card.on{border-color:var(--cyan);box-shadow:0 0 0 2px #00C2FF55}
+.th-prev{height:112px;padding:10px;display:flex;flex-direction:column;gap:6px;background:var(--p-bg)}
+.th-prev i{display:block;height:44px;border-radius:12px;background:var(--p-hero)}
+.th-prev s{display:flex;gap:6px}.th-prev s u{flex:1;height:34px;border-radius:9px;background:var(--p-card);border:1px solid var(--p-line)}
+.th-name{padding:8px 10px;font-size:14px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+.th-name .ti{color:var(--cyan)}
+.v-home .v-tile{position:relative}.vt-ring{position:absolute;left:8px;bottom:8px}
+.rir{margin:10px 0 2px;padding:10px 12px;border-radius:14px;background:#1A2036;border:1px solid #2E3549;display:flex;flex-direction:column;gap:8px}
+.rir-q{display:flex;gap:8px;align-items:center;font-size:14px}.rir-q .ti{color:#7FB2FF;font-size:18px}
+.rir-o{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.rir-o button{appearance:none;min-height:52px;border-radius:12px;border:1px solid #2E3549;background:#141827;color:#E6ECF2;font:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.2}
+.rir-o button b{font-size:17px}.rir-o button span{font-size:11.5px;color:#8A93A6}
+.rir-o button.on{border-color:#2F6BFF;background:#2F6BFF22;box-shadow:0 0 0 1px #2F6BFF inset}
+.rd-q{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:8px 0}.rd-o{display:flex;gap:6px}.rd-o .chip{min-width:58px;justify-content:center}.chip.on{background:#2F6BFF33;border-color:#2F6BFF;color:#fff}
+.rd-note{display:flex;gap:8px;align-items:center;margin:8px 0 2px;padding:8px 10px;border-radius:12px;background:#00E0B814;color:#7FF0D8;font-size:12.5px}
+.kc .kc-t{display:flex;gap:10px;align-items:flex-start}.kc .kc-t>.ti{font-size:24px;color:var(--h-acc,#FF8A00)}.kc-q{margin:8px 0;font-size:14px;font-weight:700}
+.mv{display:flex;flex-direction:column;gap:8px}.mv-r{display:grid;grid-template-columns:78px 1fr 28px auto;align-items:center;gap:8px;font-size:13px}.mv-now{grid-column:2/5;margin-top:-6px}
+.mv-b{position:relative;height:8px;border-radius:4px;background:#232A3D;overflow:hidden}.mv-b i{position:absolute;right:0;top:0;bottom:0;border-radius:4px}.mv-b s{position:absolute;top:0;bottom:0;width:1px;background:#8A93A666;text-decoration:none}
+.mv-f{font-size:11px;font-weight:700;padding:2px 7px;border-radius:999px}.mv-f.low{background:#FF8A0022;color:#FFB15C}.mv-f.high{background:#FF5C8A22;color:#FF9DB8}
+.ram-s{display:flex;gap:10px;margin-top:10px;padding:10px 12px;border-radius:14px;background:#E0B83A14;border:1px solid #E0B83A44;font-size:13px}.ram-s>.ti{font-size:20px;color:#E0B83A}
+.card.dim{opacity:.5}input.sw{width:46px;height:26px}
+/* v3.2: الرئيسية تبقى بدون تمرير على iPhone 13 */
+.v-home .tcard{gap:5px;padding:12px 14px}
+.v-home .tc-title{font-size:24px}
+.tc-tags span{font-size:13px;padding:2px 9px}
+.v-home .tc-hint{padding:6px 10px;border-radius:12px}.tc-hint .th-t b{font-size:14px}
+.v-home .tc-go{min-height:48px;font-size:17px}.tc-play{width:26px;height:26px;font-size:13px}
+.v-home .tc-head{margin-bottom:-2px}
+.vh-av{width:40px;height:40px}.vh-bell{width:38px;height:38px}
+.v-home .wk-c{width:22px;height:22px}.v-home .wk-d.w-done .wk-c{width:24px;height:24px}
+.v-home .v-card.wk{padding:8px 10px}.v-home .wk-s{padding-top:6px;margin-top:6px}
+.sn.wu{font-size:13px}
+.vt-spark{margin-top:0}.v-home .v-tile{padding:7px 10px}.v-home .tcard{gap:4px}.h-ring b{font-size:13px}
+.vh-g.cheer{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px}
+.v-home{gap:7px}
+.v-home .tcard{padding:10px 14px 12px}
+.v-home .tc-title{font-size:23px}
 </style>
 
 </head>
@@ -707,9 +834,18 @@ var Calc = (function () {
     if (o.beginner) return { mode: 'repeat', w: t, last: t };
     var min = +it.min || 0, max = +it.max || 0, sets = +it.sets || ws.length;
     // زيادة: كمّل الحد الأعلى في كل المجموعات
+    // v3.2 (A4): «كم باقي عندك؟» على آخر مجموعة: 3+ مع العدّات كاملة = زيادة أكبر (بحد 5 كجم)، و0 مع عدّات ناقصة = تخفيف من أول مرة
+    var rir = ws[ws.length - 1].rir;
     if (max && ws.length >= sets && ws.every(function (x) { return +x.r >= max; })) {
       var st = inc(e, it, t);
-      return { mode: 'up', w: Math.round((t + st) * 100) / 100, last: t, step: st };
+      if (rir === 3) st = Math.min(st * 2, Math.max(st, 5));
+      return { mode: 'up', w: Math.round((t + st) * 100) / 100, last: t, step: st, rir: rir };
+    }
+    if (rir === 0 && min && ws.some(function (x) { return +x.w === t && +x.r < min; })) {
+      var s0 = inc(e, it, t), n0 = rnd(t * 0.925, s0);
+      if (n0 >= t) n0 = t - s0;
+      if (n0 > 0) return { mode: 'down', w: Math.round(n0 * 100) / 100, last: t, rir: 0 };
+      return { mode: 'same', w: t, last: t, rir: 0 };
     }
     // تنزيل: العدّات تحت الحد الأدنى في جلستين ورا بعض على نفس الوزن
     var pw = work(prev);
@@ -754,6 +890,7 @@ var Calc = (function () {
     // v3.1 (C2): فائض التضخيم = الأقل من 10% من الاحتياج أو 350 سعرة
     var delta = goal === 'bulk' ? Math.min(tdee * pct, 350) : tdee * pct;
     var kcal = Math.max(floor, goal === 'bulk' ? Math.floor((tdee + delta) / 50) * 50 : rnd(tdee + delta, 50));
+    if (+p.adj) kcal = Math.max(floor, kcal + Math.round(+p.adj / 50) * 50); // v3.2 (A6): تعديل أسبوعي وافق عليه المستخدم
     var basis = bmi >= 30 ? (+p.targetWeight > 0 ? +p.targetWeight : 25 * h * h) : kg;
     var pr = PROT[goal] || PROT.fit;
     var fatMin = 0.6 * basis, fat, carbs, prot, locked = false, unavailable = false;
@@ -874,7 +1011,7 @@ var Calc = (function () {
     var byEx = {}, vol = 0, cnt = 0;
     (s.sets || []).forEach(function (x) { (byEx[x.exId] = byEx[x.exId] || []).push(x); });
     Object.keys(byEx).forEach(function (ex) {
-      var arr = byEx[ex].sort(function (a, c) { return a.setNo - c.setNo; }).map(function (x) { var o = { w: +x.w || 0, r: +x.r || 0, wu: !!x.wu }; if (x.late) o.late = true; return o; });
+      var arr = byEx[ex].sort(function (a, c) { return a.setNo - c.setNo; }).map(function (x) { var o = { w: +x.w || 0, r: +x.r || 0, wu: !!x.wu }; if (x.late) o.late = true; if (x.rir != null && x.rir !== '') o.rir = +x.rir; return o; });
       if (!b.last[ex] || b.last[ex].date <= s.date) { if (b.last[ex]) b.prev[ex] = b.last[ex]; b.last[ex] = { date: s.date, sets: arr }; }
       var ws = arr.filter(function (x) { return !x.wu; });
       if (!ws.length) return;
@@ -886,7 +1023,7 @@ var Calc = (function () {
       });
       vol += v; cnt += ws.length;
       var h = (b.hist[ex] = b.hist[ex] || []);
-      h.push([s.date, bw, r1(be), Math.round(v), pw]);
+      h.push([s.date, bw, r1(be), Math.round(v), pw, ws.length]);
       bw = pw; be = pe;
       h.sort(function (a, c) { return a[0] < c[0] ? -1 : a[0] > c[0] ? 1 : 0; });
       // v3.1.1 (P5): أول ظهور للتمرين نقطة بداية بدون تاريخ، والرقم القياسي من ثاني مرة
@@ -901,6 +1038,48 @@ var Calc = (function () {
     b.sessions.unshift(o);
     b.sessions.sort(function (a, c) { return a.date < c.date ? 1 : a.date > c.date ? -1 : 0; });
     return b;
+  }
+
+  /* ===================== v3.2 (A6): تعديل السعرات أسبوعيًا ===================== */
+  /**
+   * يقارن متوسط وزن آخر 7 أيام بالـ 7 اللي قبلها. للتنشيف وإنقاص الوزن: النزول أسرع من 1% بالأسبوع = +100،
+   * وأبطأ من 0.25% (أو زيادة) = −100. يحتاج وزنين على الأقل في كل أسبوع. المجموع بحد ±500
+   */
+  function kcalCheck(b, today) {
+    b = b || {}; var st = b.settings || {}, g = goalKey(b);
+    if (g !== 'cut' && g !== 'lose') return null;
+    if (st.kcalWk === weekStart(today)) return null; // جاوب هالأسبوع
+    var body = (b.body || []).filter(function (x) { return +x.weight > 0; });
+    var a1 = addDays(today, -6), a0 = addDays(today, -13);
+    var cur = body.filter(function (x) { return x.date >= a1 && x.date <= today; }), prv = body.filter(function (x) { return x.date >= a0 && x.date < a1; });
+    if (cur.length < 2 || prv.length < 2) return null;
+    var avg = function (a) { return a.reduce(function (s, x) { return s + +x.weight; }, 0) / a.length; };
+    var c = avg(cur), p = avg(prv), rate = (p - c) / p, adj = +st.kcalAdj || 0;
+    var res = rate > 0.01 ? { dir: 'fast', d: 100 } : rate < 0.0025 ? { dir: 'slow', d: -100 } : null;
+    if (!res || Math.abs(adj + res.d) > 500) return null;
+    res.cur = r1(c); res.prev = r1(p); res.lost = r1(p - c); res.rate = Math.round(rate * 1000) / 10; res.adj = adj;
+    return res;
+  }
+
+  /* ===================== v3.2 (A7): حجم كل عضلة بالأسبوع ===================== */
+  /** عدد المجموعات الفعلية (بدون الإحماء) لكل عضلة في الفترة. تنبيه تحت 10 أو فوق 22 */
+  function muscleVol(b, from, to) {
+    b = b || {}; var lib = {}, out = {};
+    (b.library || []).concat(b.myEx || []).forEach(function (e) { lib[e.id] = e; });
+    Object.keys(b.hist || {}).forEach(function (ex) {
+      var m = (lib[ex] || {}).muscle; if (!m) return;
+      (b.hist[ex] || []).forEach(function (h) { if (h[0] >= from && h[0] <= to) out[m] = (out[m] || 0) + (+h[5] || 0); });
+    });
+    return Object.keys(out).map(function (m) { var n = out[m]; return { m: m, n: n, flag: n < 10 ? 'low' : n > 22 ? 'high' : '' }; })
+      .sort(function (a, c) { return c.n - a.n; });
+  }
+
+  /* ===================== v3.2 (A8): الإحماء التلقائي ===================== */
+  /** قبل أول تمرين مركّب ثقيل: 50%×8 ثم 70%×4 ثم 85%×2، مقرّبة لخطوة الزيادة (ولا تقل عن خطوة) */
+  function warmup(w, e, it) {
+    w = +w || 0; if (!(w >= 20) || (e || {}).type !== 'compound' || (e || {}).equip === 'bodyweight') return [];
+    var st = inc(e, it, w);
+    return [[0.5, 8], [0.7, 4], [0.85, 2]].map(function (x) { return { w: Math.max(st, Math.round(w * x[0] / st) * st), r: x[1] }; });
   }
 
   /* ===================== صفحة التقدم (v3.1.1: حديد | كارديو، P1–P6) ===================== */
@@ -1038,7 +1217,7 @@ var Calc = (function () {
       card = {
         type: 'train', dayId: day.id, name: day.name, count: day.items.length, estMin: Math.max(10, Math.round(sets * 2.7)),
         kind: kind, cardio: cardioPlan(kind, goalKey(b)), done: !!dates[today],
-        hint: timesDay >= 1 && sg.mode !== 'none' ? { exId: main.ex, name: e.name, last: sg.last, w: sg.w, mode: sg.mode } : null
+        hint: timesDay >= 1 && sg.mode !== 'none' ? { exId: main.ex, name: e.name, last: sg.last, w: sg.w, mode: sg.mode, step: sg.step } : null
       };
     } else {
       var todayAct = all.filter(function (s) { return s.date === today && s.dayId === 'act'; });
@@ -1055,7 +1234,7 @@ var Calc = (function () {
       for (var j = body.length - 2; j >= 0; j--) { if (diff(body[j].date, now.date) >= 7) { ref = body[j]; break; } }
       if (!ref && body.length > 1) ref = body[body.length - 2];
       var dl = ref ? r1(now.weight - ref.weight) : 0;
-      weight = { now: now.weight, date: now.date, delta: dl, dir: !ref ? '' : dl > 0 ? 'up' : dl < 0 ? 'down' : 'flat' };
+      weight = { now: now.weight, date: now.date, delta: dl, dir: !ref ? '' : dl > 0 ? 'up' : dl < 0 ? 'down' : 'flat', spark: body.slice(-8).map(function (x) { return +x.weight; }) };
     }
 
     // آخر رقم قياسي (من ثاني مرة للتمرين: الأولى نقطة بداية)
@@ -1077,12 +1256,13 @@ var Calc = (function () {
     var lw = weight ? weight.now : +u.startWeight || 0;
     // السعرات تنحسب على وزن الحساب (calcW)، وتتحدث لحالها إذا تغيّر الوزن 2 كجم أو أكثر
     var cw = +st.calcW || 0, refresh = !!(cw && lw && needsRefresh(cw, lw)), fw = cw && !refresh ? cw : lw;
-    if (u.age && u.height && fw) { food = foodPlan({ sex: u.gender, age: u.age, height: u.height, weight: fw, days: target, active: !!st.active, goal: goalKey(b), level: st.level, style: st.foodStyle }); food.refresh = refresh; food.calcW = fw; }
+    if (u.age && u.height && fw) { food = foodPlan({ sex: u.gender, age: u.age, height: u.height, weight: fw, days: target, active: !!st.active, goal: goalKey(b), level: st.level, style: st.foodStyle, adj: +st.kcalAdj || 0 }); food.refresh = refresh; food.calcW = fw; }
 
     return {
       today: today, cardioMode: cmode, isNew: !ss.length, firstWeek: !streak && age < 14, streak: streak, target: target,
       card: card, week: week, weekSum: weekSum, weight: weight, pr: pr, friends: fr.act || [],
       lastSession: ss[0] || null, food: food, setup: { steps: setStep, left: left, visible: !!left.length && age < 14 },
+      kcalChk: kcalCheck(b, today),
       show: { weekSum: ss.length > 0, streak: streak > 0, pr: !!pr, friends: (fr.act || []).length > 0, lastLine: !!(card.hint) }
     };
   }
@@ -1369,7 +1549,7 @@ var Calc = (function () {
     toolize: toolize, sameMove: sameMove, subReason: subReason, coverage: coverage, headsOf: headsOf, slotOf: function (id) { return SLOT_OF[id]; }, TOOL_AR: TOOL_AR, slug: slug,
     inc: inc, suggest: suggest, recommend: recommend, cardioGoal: cardioGoal, ACTS: ACTS, ACT_AR: ACT_AR, SPORTS: SPORTS, actMet: actMet, dayKind: dayKind, beginnerSets: beginnerSets, factor: factor, bmr: bmr, targets: targets, foodPlan: foodPlan, schedDays: schedDays, isFullRest: isFullRest, needsRefresh: needsRefresh,
     cardioMet: cardioMet, liftMet: liftMet, kcal: kcal, load: load, strainOf: strainOf, dayStrain: dayStrain, strainLabel: strainLabel,
-    RPE_WORDS: RPE_WORDS, CARDIO: CARDIO, applySession: applySession, progress: progress, cardioEntries: cardioEntries, home: home, cardioPlan: cardioPlan, weekStart: weekStart
+    RPE_WORDS: RPE_WORDS, CARDIO: CARDIO, applySession: applySession, progress: progress, kcalCheck: kcalCheck, muscleVol: muscleVol, warmup: warmup, cardioEntries: cardioEntries, home: home, cardioPlan: cardioPlan, weekStart: weekStart, addDays: addDays
   };
 })();
 if (typeof module !== 'undefined') module.exports = Calc;
@@ -1747,6 +1927,8 @@ function render() {
   var open = ['splash', 'welcome', 'login', 'register', 'forgot', 'blocked', 'privacy'].indexOf(S.route) >= 0;
   if (!open && !S.boot) { S.route = 'splash'; fn = SC.splash; }
   $('app').className = isV3(S.route) ? 'v3' + (S.route === 'onboard' ? ' ob' : '') : '';
+  document.body.classList.toggle('on-home', S.route === 'home' && !!S.boot);
+  document.body.setAttribute('data-th', curTheme());
   $('app').innerHTML = fn(S.params || {});
   if (S.route === 'library' && S.libQ) filterLib(S.libQ);
 }
@@ -2040,14 +2222,18 @@ SC.register = function () {
 };
 
 SC.blocked = function (p) {
+  if (p.code === 'EXPIRED') loadWa();
   var M = {
     PENDING: ['hourglass', 'حسابك قيد المراجعة', 'وصل طلبك، وبيتفعّل حسابك قريب. بيوصلك إيميل أول ما يتفعّل.'],
-    EXPIRED: ['calendar-off', 'حسابك غير مفعّل', 'تواصل مع صاحب التطبيق. بياناتك وتمارينك محفوظة كما هي.'],
+    EXPIRED: ['calendar-off', 'انتهى اشتراكك', 'جدّد اشتراكك وكمّل من حيث وقفت. بياناتك وتمارينك محفوظة كما هي.'],
     SUSPENDED: ['lock', 'حسابك موقوف مؤقتًا', 'تواصل مع صاحب التطبيق لمعرفة التفاصيل.']
   }[p.code] || ['info-circle', 'تعذّر الدخول', ''];
   return '<div class="hero-wall"><div class="center-col" style="flex:1;padding:24px 0"><i class="ti ti-' + M[0] + '" style="font-size:72px;color:#FFD34D"></i><h1>' + M[1] + '</h1><p class="mut">' + M[2] + '</p></div>' +
-    '<div class="stack"><button class="btn ghost" data-act="logout">رجوع لتسجيل الدخول</button></div></div>';
+    '<div class="stack">' + (p.code === 'EXPIRED' ? (S.cfgWa ? '<a class="btn" href="https://wa.me/' + esc(S.cfgWa) + '?text=' + encodeURIComponent('السلام عليكم، أبي أجدد اشتراكي في نِدّ') + '" target="_blank" rel="noopener">' + ic('brand-whatsapp') + ' جدّد عبر واتساب</a>' : '') : '') +
+    '<button class="btn ghost" data-act="logout">رجوع لتسجيل الدخول</button></div></div>';
 };
+/** رقم الواتساب للتجديد (إجراء config عام) */
+function loadWa() { if (S.cfgWa !== undefined) return; S.cfgWa = ''; call('config', {}, { quiet: true }).then(function (c) { S.cfgWa = (c && c.whatsapp) || ''; if (S.route === 'blocked') render(); }).catch(function () {}); }
 
 SC.forgot = function (p) {
   if (p.step === 2) {
@@ -2138,12 +2324,22 @@ function todayCard(h) {
         x.mode === 'down' ? nm + ': آخر مرة ' + fw(x.last) + ' كجم · خفّف اليوم لـ ' + fw(x.w) :
           nm + ': آخر مرة ' + fw(x.last) + ' كجم · كرّر نفس الوزن';
     }
-    return '<section class="tcard train"><div class="tc-head"><div><div class="tc-sub">' + (h.isNew ? 'أول تمرين لك · ' + WD[lnow().getDay()] : dayLbl) + '</div>' +
+    // v3.2: حرف اليوم كبير بالخلفية، ووسوم العضلات، وأيقونات العدد والمدة والكارديو، والوزن المقترح بشارة، وزر البدء بأيقونة تشغيل
+    var dy = (S.boot.program || []).filter(function (x) { return x.id === c.dayId; })[0], tags = dayMuscles(dy);
+    var big = String(c.name || '').trim().split(/\s+/).pop(); big = big.length <= 2 ? big : big.slice(0, 1);
+    var hb = '';
+    if (!h.isNew && c.hint) {
+      var hx = c.hint;
+      hb = '<div class="tc-hint"><div class="th-t"><span><span class="en">' + esc(hx.name) + '</span> · آخر مرة ' + fw(hx.last) + '</span><b>' + (hx.mode === 'up' ? 'جرّب اليوم ' + fw(hx.w) + ' كجم' : hx.mode === 'down' ? 'خفّف اليوم لـ ' + fw(hx.w) + ' كجم' : 'كرّر نفس الوزن') + '</b></div>' +
+        (hx.mode === 'up' ? '<span class="tc-up">' + ic('arrow-up') + '<span class="en">' + fw(hx.w - hx.last) + '+</span></span>' : '') + '</div>';
+    } else if (hint) hb = '<div class="tc-hint">' + hint + '</div>';
+    return '<section class="tcard train"><span class="tc-big en" aria-hidden="true">' + esc(big) + '</span><div class="tc-head"><div><div class="tc-sub">' + (h.isNew ? 'أول تمرين لك · ' + WD[lnow().getDay()] : dayLbl) + '</div>' +
       '<div class="tc-title en">' + esc(c.name) + '</div></div>' +
       (h.isNew ? '' : '<button class="tc-edit" data-act="go" data-to="day" data-p=\'' + pj({ id: c.dayId }) + '\' aria-label="تعديل تمارين اليوم في برنامجك">' + ic('pencil') + 'تعديل اليوم</button>') + '</div>' +
-      '<div class="tc-meta">' + exCount(c.count) + ' · ' + c.estMin + ' د' + (cl ? ' · ' + cl : '') + (c.done ? ' · أنجزته اليوم ✅' : '') + '</div>' +
-      (hint ? '<div class="tc-hint">' + hint + '</div>' : '') +
-      '<button class="tc-go" data-act="startDay" data-day="' + esc(c.dayId) + '">' + (h.isNew ? 'ابدأ أول تمرين' : 'ابدأ التمرين') + ' ' + ic('player-play-filled') + '</button></section>';
+      (tags.length ? '<div class="tc-tags">' + tags.map(function (t) { return '<span>' + t + '</span>'; }).join('') + '</div>' : '') +
+      '<div class="tc-ic tc-meta"><span>' + ic('list') + exCount(c.count) + '</span><span>' + ic('clock') + c.estMin + ' د</span>' + (cl ? '<span>' + ic('bike') + cl + '</span>' : '') + (c.done ? '<span>أنجزته اليوم ✅</span>' : '') + '</div>' +
+      hb +
+      '<button class="tc-go" data-act="startDay" data-day="' + esc(c.dayId) + '"><span class="tc-play">' + ic('player-play-filled') + '</span>' + (h.isNew ? 'ابدأ أول تمرين' : 'ابدأ التمرين') + '</button><span class="tc-band" aria-hidden="true"></span></section>';
   }
   // v3.1 (U1): المستخدم الجديد وأول يوم له راحة: نعطيه زر يبدأ أول تمرين على طول
   if (h.isNew && !(c.acts || []).length) {
@@ -2193,7 +2389,8 @@ function weekCard(h) {
   var s = h.weekSum;
   if (h.cardioMode) return '<section class="v-card wk"><div class="wk-g">' + days + '</div>' + (h.show.weekSum ?
     '<div class="wk-s"><div><b>' + h.card.weekMin + ' د</b><span>نشاطك</span></div><div><b>' + h.card.days + '/' + h.card.target + '</b><span>أيام</span></div><div><b>' + h.card.goalMin + ' د</b><span>هدفك</span></div></div>' : '') + '</section>';
-  return '<section class="v-card wk"><div class="wk-g">' + days + '</div>' + (h.show.weekSum ?
+  var nDone = h.week.filter(function (w) { return w.done; }).length, tgt = Calc.schedDays(S.boot.settings || {});
+  return '<section class="v-card wk"><div class="wk-row">' + ring(nDone / Math.max(1, tgt), 'var(--h-ok)', 46, 5, '<span class="en">' + nDone + '/' + tgt + '</span>', nDone + ' من ' + tgt + ' تمارين هذا الأسبوع') + '<div class="wk-g">' + days + '</div></div>' + (h.show.weekSum ?
     '<div class="wk-s"><div><b>' + s.min + ' د</b><span>تمرين</span></div><div><b>' + fmtN(s.volume) + '</b><span>كجم مرفوعة</span></div><div><b>' + s.cardioMin + ' د</b><span>كارديو</span></div></div>' : '') + '</section>';
 }
 
@@ -2206,13 +2403,125 @@ function tiles3(h) {
     goal = '<div class="v-tile"><span class="vt-l">الهدف · ' + GOAL_AR[g] + '</span><b>أسبوع ' + wk + '/' + st.goalWeeks + '</b><div class="vt-bar"><i style="width:' + Math.round(wk / st.goalWeeks * 100) + '%"></i></div></div>';
   } else goal = '<div class="v-tile"><span class="vt-l">هدفك</span><b>' + GOAL_AR[g] + '</b>' + (st.goalWeeks ? '<span class="vt-s">خطة ' + st.goalWeeks + ' أسابيع</span>' : '') + '</div>';
   var w = h.weight, wt;
-  if (w) wt = '<button class="v-tile" data-act="quickWeight"><span class="vt-l">وزنك</span><b>' + fw(w.now) + '</b><span class="vt-s ' + (w.dir === 'down' ? 'g' : w.dir === 'up' ? 'o' : '') + '">' + (w.dir === 'down' ? '↓ ' + Math.abs(w.delta) + ' أسبوعيًا' : w.dir === 'up' ? '↑ ' + w.delta + ' أسبوعيًا' : w.dir === 'flat' ? 'ثابت' : 'كجم') + '</span></button>';
+  if (w) wt = '<button class="v-tile" data-act="quickWeight"><span class="vt-l">وزنك</span><b>' + fw(w.now) + '</b><span class="vt-s ' + (w.dir === 'down' ? 'g' : w.dir === 'up' ? 'o' : '') + '">' + (w.dir === 'down' ? '↓ ' + Math.abs(w.delta) + ' أسبوعيًا' : w.dir === 'up' ? '↑ ' + w.delta + ' أسبوعيًا' : w.dir === 'flat' ? 'ثابت' : 'كجم') + '</span>' + spark(w.spark) + '</button>';
   else wt = '<button class="v-tile" data-act="quickWeight"><span class="vt-l">وزنك</span><b>—</b><span class="vt-s b-l">سجّل وزنك</span></button>';
   var f = h.food;
-  var food = '<button class="v-tile" data-act="macros"><span class="vt-l">سعرات أكلك المقترحة</span><b>' + (f ? fmtN(f.kcal) : '—') + '</b><span class="vt-s">' + (f ? 'بروتين ' + f.protein + ' جم' : 'كمّل بياناتك') + '</span></button>';
+  var food = '<button class="v-tile' + (f && !h.isNew ? '' : '') + '" data-act="macros"><span class="vt-l">سعرات أكلك المقترحة</span><b>' + (f ? fmtN(f.kcal) : '—') + '</b><span class="vt-s">' + (f ? 'بروتين ' + f.protein + ' جم' : 'كمّل بياناتك') + '</span>' +
+    (f ? '<span class="vt-ring">' + ring(f.kP / Math.max(1, f.kcal), 'var(--h-ring2)', 30, 4, '', 'البروتين ' + Math.round(f.kP / f.kcal * 100) + '% من السعرات') + '</span>' : '') + '</button>';
   return '<div class="v-tiles ' + (h.isNew ? 't2' : 't3') + '">' + goal + (h.isNew ? '' : wt) + food + '</div>';
 }
 
+/** v3.2 (A5): فحص الجاهزية. وحدة سيئة (نوم قليل أو تعب) = −5%، وألم أو اثنين سيئة = −10%، لهالجلسة بس */
+var RD = [['sleep', 'النوم', [['good', 'زين'], ['ok', 'عادي'], ['bad', 'قليل']]], ['tired', 'التعب', [['good', 'مرتاح'], ['ok', 'عادي'], ['bad', 'تعبان']]], ['pain', 'ألم أو شد', [['good', 'لا'], ['ok', 'خفيف'], ['bad', 'فيه ألم']]]];
+function readyHtml() {
+  var r = S.rd || {};
+  return '<h3 style="margin:0 0 4px">قبل ما تبدأ: كيف حالك اليوم؟</h3><p class="xs mut" style="margin:0 0 10px">اختياري. إذا يومك ضعيف نخفف الأوزان المقترحة لهالجلسة بس.</p>' +
+    RD.map(function (q) {
+      return '<div class="rd-q"><span class="sm b">' + q[1] + '</span><div class="rd-o">' + q[2].map(function (o) {
+        return '<button class="chip' + (r[q[0]] === o[0] ? ' on' : '') + '" data-act="rdPick" data-k="' + q[0] + '" data-v="' + o[0] + '" aria-pressed="' + (r[q[0]] === o[0]) + '">' + o[1] + '</button>';
+      }).join('') + '</div></div>';
+    }).join('') +
+    '<label class="check" style="margin-top:8px"><input type="checkbox" id="rdOff"><span class="sm">لا تسألني قبل كل تمرين</span></label>' +
+    '<div class="tc-2" style="margin-top:10px"><button class="btn" data-act="rdGo">' + ic('player-play-filled') + ' ابدأ</button><button class="btn dark" data-act="rdGo" data-skip="1">تخطّى</button></div>';
+}
+function readyCut(r) {
+  if (!r) return 1;
+  var bad = ['sleep', 'tired', 'pain'].filter(function (k) { return r[k] === 'bad'; }).length;
+  if (r.pain === 'bad' || bad >= 2) return 0.9;
+  if (bad === 1) return 0.95;
+  return 1;
+}
+function applyReady(r) {
+  if (!S.draft) return;
+  var f = readyCut(r);
+  if (r && (r.sleep || r.tired || r.pain)) S.draft.ready = { f: f, sleep: r.sleep || '', tired: r.tired || '', pain: r.pain || '' };
+  saveDraft(); if (f < 1) render();
+}
+/** v3.2 (A4): «كم باقي عندك؟» بعد آخر مجموعة في التمرين (اختياري) */
+function rirBox(it, e, open) {
+  if (open >= 0 || isTime(e) || e.equip === 'bodyweight' || !it.rows.some(function (r) { return r.done && !r.wu; })) return '';
+  var o = [[0, '0', 'ولا وحدة'], [1, '1–2', 'تقريبًا'], [3, '3+', 'باقي فيني']];
+  return '<div class="rir"><div class="rir-q">' + ic('battery-3') + '<b>كم عدّة باقي عندك في آخر مجموعة؟</b></div><div class="rir-o">' + o.map(function (x) {
+    return '<button class="' + (it.rir === x[0] ? 'on' : '') + '" data-act="setRir" data-v="' + x[0] + '" aria-pressed="' + (it.rir === x[0]) + '"><b class="en">' + x[1] + '</b><span>' + x[2] + '</span></button>';
+  }).join('') + '</div><div class="xs mut">يساعدنا نضبط وزنك الجاي. اختياري.</div></div>';
+}
+/** v3.2 (A6): اقتراح تعديل السعرات أسبوعيًا (يوافق بضغطة) */
+function kcalCard(h) {
+  var k = h.kcalChk; if (!k || S.draft) return '';
+  return '<section class="v-card kc"><div class="kc-t">' + ic(k.dir === 'fast' ? 'trending-down' : 'trending-up') + '<div><b>' + (k.dir === 'fast' ? 'نزولك أسرع من الهدف' : 'نزولك أبطأ من الهدف') + '</b>' +
+    '<div class="xs mut">متوسط وزنك ' + lri(k.cur) + ' كجم، والأسبوع اللي قبله ' + lri(k.prev) + ' (' + (k.lost >= 0 ? 'نزلت ' + lri(k.lost) : 'زدت ' + lri(-k.lost)) + ' كجم)</div></div></div>' +
+    '<div class="kc-q">' + (k.d > 0 ? 'نزيد سعراتك 100 عشان تحافظ على عضلك؟' : 'ننقص سعراتك 100 عشان ترجع للهدف؟') + '</div>' +
+    '<div class="tc-2"><button class="btn sm" data-act="kcalYes" data-d="' + k.d + '">' + (k.d > 0 ? '+100 سعرة' : '−100 سعرة') + '</button><button class="btn sm dark" data-act="kcalNo">مو الحين</button></div></section>';
+}
+/** v3.2 (A7): حجم كل عضلة: الأسبوع اللي فات كامل مع التنبيه، وهذا الأسبوع لين الحين */
+function muscleVolHtml(b) {
+  var ws = Calc.weekStart(ymd()), lw = Calc.addDays(ws, -7);
+  var last = Calc.muscleVol(b, lw, Calc.addDays(ws, -1)), now = Calc.muscleVol(b, ws, Calc.addDays(ws, 6));
+  if (!last.length && !now.length) return '';
+  var nowOf = {}; now.forEach(function (x) { nowOf[x.m] = x.n; });
+  var rows = (last.length ? last : now).filter(function (x) { return MUS[x.m]; });
+  var mx = Math.max.apply(null, rows.map(function (x) { return x.n; }).concat([22]));
+  var lo = last.filter(function (x) { return x.flag === 'low'; }).length, hi = last.filter(function (x) { return x.flag === 'high'; }).length;
+  return '<div class="sec-h"><h3>مجموعاتك لكل عضلة</h3><span class="xs mut">' + (last.length ? 'الأسبوع اللي فات' : 'هذا الأسبوع لين الحين') + '</span></div>' +
+    '<div class="card mv">' + rows.map(function (x) {
+      var fl = last.length ? x.flag : '';
+      return '<div class="mv-r"><span class="mv-m">' + MUS[x.m] + '</span><span class="mv-b"><i style="width:' + Math.round(x.n / mx * 100) + '%;background:' + (fl === 'low' ? '#FF8A00' : fl === 'high' ? '#FF5C8A' : '#00E0B8') + '"></i><s style="right:' + Math.round(10 / mx * 100) + '%"></s><s style="right:' + Math.round(22 / mx * 100) + '%"></s></span>' +
+        '<b class="en">' + x.n + '</b>' + (fl ? '<span class="mv-f ' + fl + '">' + (fl === 'low' ? 'قليل' : 'كثير') + '</span>' : '') +
+        (last.length && nowOf[x.m] ? '<span class="xs mut mv-now">هالأسبوع ' + lri(nowOf[x.m]) + '</span>' : '') + '</div>';
+    }).join('') +
+    '<div class="xs mut" style="margin-top:6px">المناسب للعضلة 10 إلى 22 مجموعة بالأسبوع (بدون الإحماء).' + (lo ? ' ' + lo + ' عضلة تحت 10.' : '') + (hi ? ' ' + hi + ' فوق 22.' : '') + '</div></div>';
+}
+/** v3.2: حلقة نسبة (SVG) */
+function ring(p, col, size, sw, inner, label) {
+  p = Math.max(0, Math.min(1, +p || 0)); var r = (size - sw) / 2, c = 2 * Math.PI * r;
+  return '<span class="h-ring" style="width:' + size + 'px;height:' + size + 'px" role="img" aria-label="' + esc(label || '') + '"><svg width="' + size + '" height="' + size + '"><circle cx="' + size / 2 + '" cy="' + size / 2 + '" r="' + r + '" stroke="var(--h-track)" stroke-width="' + sw + '" fill="none"/>' +
+    '<circle cx="' + size / 2 + '" cy="' + size / 2 + '" r="' + r + '" stroke="' + col + '" stroke-width="' + sw + '" fill="none" stroke-linecap="round" stroke-dasharray="' + c.toFixed(1) + '" stroke-dashoffset="' + (c * (1 - p)).toFixed(1) + '"/></svg>' + (inner ? '<b>' + inner + '</b>' : '') + '</span>';
+}
+/** v3.2: شارت صغير لآخر الأوزان */
+function spark(v) {
+  if (!v || v.length < 2) return '';
+  var W = 80, H = 14, mn = Math.min.apply(null, v), mx = Math.max.apply(null, v), rg = mx - mn || 1;
+  var pts = v.map(function (x, i) { return (i * W / (v.length - 1)).toFixed(1) + ',' + (2 + (H - 4) * (1 - (x - mn) / rg)).toFixed(1); });
+  return '<svg class="vt-spark" width="' + W + '" height="' + H + '" aria-hidden="true"><polyline points="' + pts.join(' ') + '" fill="none" stroke="var(--h-ok)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="' + pts[pts.length - 1].split(',')[0] + '" cy="' + pts[pts.length - 1].split(',')[1] + '" r="2.8" fill="var(--h-ok)"/></svg>';
+}
+/** v3.2: عضلات اليوم (أكثر 3) */
+function dayMuscles(d) {
+  if (!d) return [];
+  var cnt = {}, order = [];
+  (d.items || []).forEach(function (it) { var m = exOf(it.ex).muscle; if (!m || !MUS[m]) return; if (!cnt[m]) { cnt[m] = 0; order.push(m); } cnt[m]++; });
+  return order.sort(function (a, b) { return cnt[b] - cnt[a] || order.indexOf(a) - order.indexOf(b); }).slice(0, 3).map(function (m) { return MUS[m]; });
+}
+/* ===================== v3.2: المظهر (الأنماط السبعة) ===================== */
+var THEMES = [
+  ['neon', 'نيون داكن', 'الافتراضي', '#0B0E17', 'linear-gradient(135deg,#FF3B8D,#8B3DF0 60%,#3D6BFF)', '#171C2B', '#232A3D'],
+  ['light', 'فاتح نظيف', '', '#F6F7FB', 'linear-gradient(135deg,#FF3B8D,#FF8A00)', '#FFFFFF', '#ECEEF4'],
+  ['volt', 'أسود رياضي', '', '#050505', 'repeating-linear-gradient(135deg,#C6FF00 0 10px,#B8F000 10px 20px)', '#101010', '#1F1F1F'],
+  ['glass', 'زجاجي', '', 'radial-gradient(circle at 90% 10%,#8B3DF0,transparent 50%),radial-gradient(circle at 5% 70%,#FF3B8D,transparent 45%),#0B0F1A', 'rgba(255,255,255,.22)', 'rgba(255,255,255,.12)', 'rgba(255,255,255,.2)'],
+  ['calm', 'هادئ بسيط', '', '#121318', '#18191F', '#18191F', '#2A2C36'],
+  ['bold', 'كتل جريئة', '', '#FFF4E0', '#FF3B8D', '#FFFFFF', '#111111'],
+  ['saudi', 'هوية سعودية', 'أخضر وذهبي ونقش السدو', 'radial-gradient(110% 55% at 100% 0%,#0D4A2C,transparent 60%),#06150E', 'linear-gradient(135deg,#008A45,#005C2E)', '#0C2418', '#1C3B2A']
+];
+function curTheme() {
+  var t = (S.boot && S.boot.settings && S.boot.settings.theme) || LS.get('theme', '') || 'neon';
+  return THEMES.some(function (x) { return x[0] === t; }) ? t : 'neon';
+}
+SC.ramadan = function () {
+  var st = S.boot.settings || {}, on = !!+st.ramadan, ift = +st.iftar || 18;
+  return topbar('وضع رمضان') +
+    '<div class="card stack"><label class="row between"><span><b>وضع رمضان</b><div class="xs mut">تشغيل يدوي، وتطفيه بعد رمضان</div></span><input type="checkbox" class="sw" data-act="ramToggle"' + (on ? ' checked' : '') + ' aria-label="وضع رمضان"></label></div>' +
+    '<div class="card stack' + (on ? '' : ' dim') + '"><b>وقت الفطور تقريبًا</b><div class="row wrap">' + [16, 17, 18, 19].map(function (hh) {
+      return '<button class="chip' + (ift === hh ? ' on' : '') + '" data-act="ramIftar" data-v="' + hh + '"' + (on ? '' : ' disabled') + '>' + (hh - 12) + ' م</button>';
+    }).join('') + '</div><div class="xs mut">تذكير التمرين يجيك بعد الفطور بساعتين (الساعة <span class="en">' + (ift + 2 - 12) + '</span> م).</div></div>' +
+    '<div class="card stack"><b>الأكل</b><div class="sm mut">سعراتك تتقسم: 60% على الفطور و40% على السحور، وتشوفها في نافذة السعرات.</div></div>';
+};
+SC.appearance = function () {
+  var cur = curTheme();
+  return topbar('المظهر') + '<p class="sm mut" style="margin:0">اختر شكل الرئيسية. الألوان تتغيّر فورًا، وتنحفظ في حسابك.</p>' +
+    '<div class="th-grid">' + THEMES.map(function (t) {
+      return '<button class="th-card' + (t[0] === cur ? ' on' : '') + '" data-act="setTheme" data-v="' + t[0] + '" aria-pressed="' + (t[0] === cur) + '" style="--p-bg:' + t[3] + ';--p-hero:' + t[4] + ';--p-card:' + t[5] + ';--p-line:' + t[6] + '">' +
+        '<span class="th-prev" aria-hidden="true"><i></i><s><u></u><u></u></s></span><span class="th-name"><span>' + t[1] + (t[2] ? '<span class="xs mut" style="display:block;font-weight:500">' + t[2] + '</span>' : '') + '</span>' + (t[0] === cur ? ic('circle-check-filled') : '') + '</span></button>';
+    }).join('') + '</div>';
+};
 function tiles2(h) {
   var out = [], ls = h.lastSession;
   if (h.show.pr) out.push('<button class="v-tile vt-pr" data-act="tabgo" data-to="progress"><span class="vt-i">' + ic('trophy') + '</span><span class="vt-t"><span class="vt-l o">رقم قياسي</span><b class="en ell">' + esc(h.pr.name) + ' ' + fw(h.pr.w) + '</b></span></button>');
@@ -2250,9 +2559,11 @@ SC.home = function () {
   var b = S.boot, u = b.user, h = homeModel();
   var first = String(u.name || '').split(' ')[0];
   var greet = h.isNew ? 'أهلًا فيك' : new Date().getHours() < 12 ? 'صباح الخير' : 'مساء الخير';
-  var badge = h.show.streak ? '<span class="v-badge fire">' + ic('flame') + weeksStreak(h.streak) + '</span>' : h.firstWeek ? '<span class="v-badge new">أسبوعك الأول</span>' : '';
+  var badge = h.show.streak ? '<span class="v-badge fire" title="' + weeksStreak(h.streak) + '" aria-label="' + weeksStreak(h.streak) + '">' + ic('flame') + '<span class="en">' + h.streak + '</span></span>' : h.firstWeek ? '<span class="v-badge new">أسبوعك الأول</span>' : '';
   var chl = cheerLine();
-  var head = '<header class="v-head"><div><div class="vh-g' + (chl ? ' cheer' : '') + '">' + (chl || greet) + '</div><div class="vh-n">' + esc(first) + '</div></div>' + badge + '</header>';
+  // v3.2: فوق: صورة رمزية، وجرس التنبيهات، وشارة السلسلة
+  var head = '<header class="v-head"><div class="vh-who"><span class="vh-av" aria-hidden="true">' + esc(String(first || '؟').slice(0, 1)) + '</span><div><div class="vh-g' + (chl ? ' cheer' : '') + '">' + (chl || greet) + '</div><div class="vh-n">' + esc(first) + '</div></div></div>' +
+    '<div class="vh-r"><button class="vh-bell" data-act="go" data-to="notify" aria-label="التنبيهات">' + ic('bell') + '</button>' + badge + '</div></header>';
   var body;
   if (h.isNew) {
     var plan = (b.settings.programName || '') ;
@@ -2262,7 +2573,7 @@ SC.home = function () {
   } else {
     // أول أسبوعين: «بدايتك في نِدّ» تاخذ مكان مربع «آخر جلسة» عشان الرئيسية تبقى بدون تمرير
     var t2 = h.setup.visible && !h.show.pr && !h.show.friends ? '' : tiles2(h);
-    body = todayCard(h) + weekCard(h) + tiles3(h) + t2 + (h.setup.visible ? setupCard(h, true) : '');
+    body = todayCard(h) + kcalCard(h) + weekCard(h) + tiles3(h) + t2 + (h.setup.visible ? setupCard(h, true) : '');
   }
   if (h.food && h.food.reset && !S.styleReset) {
     S.styleReset = 1;
@@ -2297,6 +2608,14 @@ function styleDiff(f) {
   if (f.dF) t.push(f.dF > 0 ? '+' + lri(f.dF) + ' جم دهون' : 'دهون أقل بـ ' + lri(-f.dF) + ' جم');
   return t.length ? '<p class="vs-diff">' + t.join(' · ') + ' عن المتوازن</p>' : '';
 }
+/** v3.2 (A10): وضع رمضان: السعرات تتقسم 60% فطور و40% سحور */
+function ramSplit(f) {
+  if (!f || !+(S.boot.settings || {}).ramadan) return '';
+  var a = function (v, p) { return Math.round(v * p / 5) * 5; };
+  return '<div class="ram-s">' + ic('moon') + '<div><b>رمضان</b>' +
+    '<div><span>الفطور: <b class="en">' + fmtN(Math.round(f.kcal * 0.6 / 50) * 50) + '</b> سعرة · بروتين <span class="en">' + a(f.protein, 0.6) + '</span> جم</span></div>' +
+    '<div><span>السحور: <b class="en">' + fmtN(Math.round(f.kcal * 0.4 / 50) * 50) + '</b> سعرة · بروتين <span class="en">' + a(f.protein, 0.4) + '</span> جم</span></div></div></div>';
+}
 function macrosHtml() {
   var h = homeModel(), f = h && h.food, st = S.boot.settings || {}, style = (f && f.style) || st.foodStyle || 'balanced';
   if (!f) return '<div class="v3 vsheet"><div class="vs-h"><b>سعرات أكلك المقترحة</b><button class="vs-x" data-act="closeSheet" aria-label="إغلاق">' + ic('x') + '</button></div>' +
@@ -2315,7 +2634,7 @@ function macrosHtml() {
     '<div class="vs-m"><div class="p"><span>بروتين</span><b>' + f.protein + ' <small>جم</small></b><span class="vt-l">' + fmtN(f.kP) + ' سعرة</span></div>' +
     '<div class="f"><span>دهون</span><b>' + f.fat + ' <small>جم</small></b><span class="vt-l">' + fmtN(f.kF) + ' سعرة</span></div>' +
     '<div class="c"><span>كارب</span><b>' + f.carbs + ' <small>جم</small></b><span class="vt-l">' + fmtN(f.kC) + ' سعرة</span></div></div>' +
-    styleDiff(f) +
+    styleDiff(f) + ramSplit(f) +
     '<p class="vt-l">نفس الأرقام في أيام التمرين والراحة · تتحدث لحالها إذا تغيّر وزنك 2 كجم</p></div>' +
     (f.warn.indexOf('keto_perf') >= 0 ? '<p class="vs-warn">الكيتو ممكن يقلل أداءك في التمارين القوية أول أسابيع.</p>' : '') +
     (f.warn.indexOf('doctor') >= 0 ? '<p class="vs-warn">إذا عندك سكري أو مشكلة في الكلى، استشر طبيبك قبل.</p>' : '') +
@@ -2685,11 +3004,15 @@ function sugFor(it) {
   var last = lastSets(it.exId), lw = last.filter(function (x) { return !x.wu; }), lwu = last.filter(function (x) { return x.wu; });
   var k = 0, kw = 0, prevDone = null;
   return it.rows.map(function (r) {
+    if (r.wu && r.aw) return { w: r.aw, r: r.ar, auto: 1 }; // v3.2 (A8)
     if (r.wu) { var q = lwu[kw++]; return q ? { w: q.w, r: q.r } : null; }
     var p = lw[k] || lw[lw.length - 1]; k++;
     var move = sg.mode === 'up' || sg.mode === 'down';
     var out = p ? { w: move ? sg.w : p.w, r: p.r, up: sg.mode === 'up' ? sg.step : 0, down: sg.mode === 'down' } : null;
     // v3.1 (U4): المجموعة اللي بعد مجموعة مسجّلة تتعبى من اللي قبلها (بالأزرق)، و✓ يعتمدها
+    // v3.2 (A5): يوم ضعيف = الأوزان المقترحة تقل 5–10% لهالجلسة بس (مقرّبة لخطوة الزيادة)
+    var rf = S.draft && S.draft.ready && S.draft.ready.f;
+    if (out && rf && rf < 1 && +out.w > 0) { var stp = Calc.inc(e, it.target, +out.w); out = { w: Math.max(stp, Math.round(+out.w * rf / stp) * stp), r: out.r, up: 0, down: true, ready: 1 }; }
     if (!r.done && prevDone) out = { w: prevDone.w, r: prevDone.r, up: 0, down: false, fromPrev: 1 };
     if (r.done && r.w !== '' && r.r !== '') prevDone = { w: r.w, r: r.r };
     return out;
@@ -2749,12 +3072,17 @@ SC.session = function () {
     (it.from ? '<div class="ss-sub">↩️ بديل <span class="en">' + esc(exOf(it.from).name) + '</span>: ' + Calc.subReason(it, null, S.ex) + '</div>' : it.fb ? '<div class="ss-sub">↩️ ما له بديل بأدواتك</div>' : '') +
     '<div class="ss-btns"><a class="v-chip" href="' + esc(videoUrl(e)) + '" target="_blank" rel="noopener">' + ic('player-play') + 'طريقة الأداء</a>' +
     '<button class="v-chip" data-act="swapAsk" data-ctx="sess" data-i="' + d.cur + '">' + ic('replace') + 'بديل</button>' +
+    '<button class="v-chip" data-act="busyAsk" data-i="' + d.cur + '">' + ic('hourglass') + 'الجهاز مشغول</button>' +
     '<button class="v-chip" data-act="itemEdit" data-ctx="sess" data-i="' + d.cur + '">' + ic('adjustments') + 'تعديل</button></div></div>' +
     // كارديو قبل التمرين: يبان في أول تمرين لين يبدأ (لأن البدء صار مباشر بدون القائمة)
     (d.cur === 0 && (d.cplan || {}).before && !(d.cardio || []).some(function (c) { return c.when === 'before'; }) && !it.rows.some(function (r) { return r.done; }) ?
       '<button class="ss-cardio" data-act="afSess" data-when="before">' + ic('heartbeat') + '<span class="grow">قبلها: ' + d.cplan.before.txt + ' · جهد ' + d.cplan.before.eff + '</span><span class="vt-l">سجّله</span></button>' : '') +
     '<div class="ss-last"><span class="vt-l">آخر مرة:</span><b>' + (lt ? '<span class="en">' + lt + '</span>' : 'أول مرة لهذا التمرين، ابدأ بوزن خفيف') + '</b></div>' +
     '<div class="ss-tbl"><div class="sr hd"><span>المجموعة</span><span>الوزن (كجم)</span><span>' + (tm ? 'الثواني' : 'العدّات') + '</span><span></span></div>' + rows +
+    rirBox(it, e, open) +
+    (it.autoWu && it.rows.some(function (r) { return r.aw && !r.done; }) ? '<div class="rd-note wu-note">' + ic('flame') + '<span>أضفنا لك إحماء: 50% × 8 ثم 70% × 4 ثم 85% × 2. ما يدخل في الحجم ولا الأرقام القياسية</span></div>' : '') +
+    (d.ready && d.ready.f < 1 && open >= 0 ? '<div class="rd-note">' + ic('heart-handshake') + '<span>يومك اليوم أخف، فخففنا الأوزان المقترحة ' + Math.round((1 - d.ready.f) * 100) + '% لهالجلسة بس</span></div>' : '') +
+    (!LS.get('swpTip', 0) && open >= 0 && sug[open] ? '<div class="swp-tip">' + ic('arrows-horizontal') + '<span>الأرقام جاهزة: ✓ يسجّلها، واسحب على الرقم يمين أو يسار تعدّله</span></div>' : '') +
     '<div class="ss-add"><button class="v-chip dash" data-act="addRow">+ مجموعة</button><button class="v-chip dash" data-act="addWu">+ إحماء</button>' +
     (it.rows.length > 1 ? '<button class="v-chip dash" data-act="delRow">− آخر مجموعة</button>' : '') + '</div></div>' +
     '<button class="ss-note" data-act="noteEdit" data-id="' + esc(it.exId) + '">' + ic('note') + '<span class="grow">' + (note ? esc(note) : '<span class="vt-l">أضف ملاحظة (مثل رقم المقعد)</span>') + '</span></button>' +
@@ -2978,6 +3306,7 @@ SC.progress = function () {
       '<div class="xs mut center">حجم التمرين = مجموع (الوزن × العدّات) لكل المجموعات، بدون الإحماء</div>' +
       '<div class="card"><div class="row between"><h3 style="margin:0">' + ttl2 + '</h3>' +
       (r.goal ? '<span class="xs b" style="color:#00E0B8">- - هدفك: ' + (per === 'year' ? lri(r.goal) + ' بالشهر' : daysAr(r.goal)) + '</span>' : '') + '</div><div dir="ltr">' + bars(r.series, labels, r.goal, { values: true, dim: dim, fmt: per === 'week' ? kfmt : null }) + '</div></div>' +
+      muscleVolHtml(b) +
       '<div class="sec-h"><h3>أرقامك القياسية</h3></div><div class="col">' +
       (prList.length ? prList.map(function (x) {
         var e = exOf(x.id);
@@ -3086,7 +3415,7 @@ SC.friends = function () {
 /* ---------- المزيد ---------- */
 SC.more = function () {
   var u = S.boot.user;
-  var items = [['program', 'barbell', 'برنامجي'], ['schedule', 'calendar', 'جدولي'], ['history', 'history', 'سجل التمارين'], ['library', 'books', 'مكتبة التمارين'],
+  var items = [['program', 'barbell', 'برنامجي'], ['schedule', 'calendar', 'جدولي'], ['appearance', 'palette', 'المظهر'], ['ramadan', 'moon', 'وضع رمضان'], ['history', 'history', 'سجل التمارين'], ['library', 'books', 'مكتبة التمارين'],
     ['me', 'heart-rate-monitor', 'جسمي: الوزن والتغذية'], ['friends', 'users', 'الأصدقاء'], ['notify', 'bell', 'التنبيهات'], ['feedback', 'message-2', 'أرسل ملاحظاتك'], ['account', 'user-cog', 'الحساب والأمان'], ['privacy', 'shield-check', 'الخصوصية والشروط']];
   if (u.role === 'admin') items.push(['admin', 'shield-lock', 'لوحة الأدمن']);
   return '<h1 class="pg-h">حسابي</h1>' +
@@ -3094,7 +3423,8 @@ SC.more = function () {
     '<div class="menu">' + items.map(function (x) {
       return '<button data-act="' + (TABS.indexOf(x[0]) >= 0 ? 'tabgo' : 'go') + '" data-to="' + x[0] + '">' + ic(x[1], 'mi') + '<span class="grow">' + x[2] + '</span>' + ic('chevron-left', 'mut') + '</button>';
     }).join('') + '<button data-act="logoutAsk" class="text-danger">' + ic('logout', 'mi') + '<span class="grow">تسجيل الخروج</span></button></div>' +
-    '<div class="center xs mut"><span class="en">Nidd v3.1.2 · All You Nidd</span></div>' + nav('more');
+    (u.role !== 'admin' ? '<div class="center xs mut sub-me">' + ic('calendar') + ' اشتراكك: ' + subTxt(u.subEnd) + '</div>' : '') +
+    '<div class="center xs mut"><span class="en">Nidd v3.2 · All You Nidd</span></div>' + nav('more');
 };
 
 SC.feedback = function () {
@@ -3176,14 +3506,15 @@ SC.admin = function () {
       '<input id="bcT" maxlength="60" placeholder="العنوان (مثال: تحديث جديد 🎉)">' +
       '<textarea id="bcX" rows="3" maxlength="300" placeholder="نص الرسالة"></textarea>' +
       '<button class="btn sm" data-act="castAsk">' + ic('send') + ' إرسال تنبيه للكل</button></div></details>' : '') +
-    '<div class="stats2">' + ['pending', 'active', 'idle', 'suspended'].map(function (k) {
+    '<div class="stats2">' + ['pending', 'active', 'expired', 'idle', 'suspended'].map(function (k) {
       return '<button class="stat ' + (f === k ? 'sel' : '') + '" data-act="adminF" data-v="' + k + '"><div class="sv en" style="color:' + ST[k][1] + '">' + c(k) + '</div><div class="sl">' + ST[k][0] + '</div></button>';
     }).join('') + '</div>' +
     '<div class="row between"><h3>' + (f === 'all' ? 'كل الحسابات' : ST[f][0]) + '</h3>' + (f !== 'all' ? '<button class="link sm" data-act="adminF" data-v="all">عرض الكل</button>' : '') + '</div>' +
     '<div class="col">' + (list.length ? list.map(function (u) {
       var s = ST[u.state] || ['', '#fff'], acts = '';
       if (u.role !== 'admin') {
-        if (u.state === 'pending') acts += '<button class="btn sm" data-act="adminApprove" data-id="' + u.id + '">' + ic('check') + ' موافقة</button>';
+        if (u.state === 'pending') acts += '<button class="btn sm" data-act="subSheet" data-id="' + u.id + '" data-name="' + esc(u.name) + '" data-new="1">' + ic('check') + ' موافقة</button>';
+        if (u.state === 'active' || u.state === 'expired') acts += '<button class="btn sm' + (u.state === 'expired' ? '' : ' dark') + '" data-act="subSheet" data-id="' + u.id + '" data-name="' + esc(u.name) + '">' + ic('calendar-plus') + (u.state === 'expired' ? ' جدّد' : ' المدة') + '</button>';
         if (u.state === 'active' || u.state === 'expired') acts += '<button class="btn sm dark" data-act="adminSuspend" data-id="' + u.id + '">إيقاف</button>';
         if (u.state === 'suspended') acts += '<button class="btn sm" data-act="adminActivate" data-id="' + u.id + '">تفعيل</button>';
         acts += '<button class="btn sm dark" data-act="adminReset" data-id="' + u.id + '">' + ic('key') + ' كلمة مؤقتة</button>';
@@ -3192,10 +3523,25 @@ SC.admin = function () {
       return '<div class="card stack"><div class="row between"><div class="grow"><div class="b">' + esc(u.name) + (u.role === 'admin' ? ' <span class="tag">أدمن</span>' : '') + '</div>' +
         '<div class="xs mut en" style="text-align:right">' + (u.username ? '@' + esc(u.username) + '<br>' : '') + esc(u.phone) + '<br>' + esc(u.email) + '</div></div><span class="tag" style="color:' + s[1] + '">' + s[0] + '</span></div>' +
         (u.deleteReq ? '<div class="xs text-danger">طلب حذف حسابه بتاريخ <span class="en">' + esc(u.deleteReq) + '</span></div>' : '') +
+        (u.role !== 'admin' && u.state !== 'pending' ? '<div class="xs b sub-l" style="color:' + (u.state === 'expired' ? '#FF8A00' : '#00E0B8') + '">' + subTxt(u.subEnd, S.admin.today) + '</div>' : '') +
         '<div class="xs mut">التسجيل: <span class="en">' + esc(u.createdAt) + '</span><br>آخر ظهور: ' + (u.lastSeen ? '<span class="en">' + esc(u.lastSeen) + '</span>' : 'ما دخل للحين') + '</div>' +
         (acts ? '<div class="row wrap">' + acts + '</div>' : '') + '</div>';
     }).join('') : '<div class="card center mut">ما فيه حسابات في هذي القائمة.</div>') + '</div>';
 };
+/** v3.2 (A1): نص الاشتراك. فاضي أو 9999 = حساب ثابت */
+function subTxt(end, today) {
+  if (!end || end >= '9999') return 'حساب ثابت';
+  var left = daysBetween(today || ymd(), end);
+  if (left < 0) return 'انتهى الاشتراك ' + lri(end);
+  return 'ساري حتى ' + lri(end) + ' · باقي ' + lri(left) + ' يوم';
+}
+var SUB_OPTS = [[14, 'تجربة 14 يوم'], [30, 'شهر'], [90, '3 أشهر'], [365, 'سنة']];
+function subSheetHtml(id, name, isNew) {
+  return '<h3 style="margin:0 0 4px">' + (isNew ? 'موافقة: ' : 'مدة اشتراك ') + esc(name) + '</h3><p class="xs mut" style="margin:0 0 12px">' + (isNew ? 'اختر مدة الاشتراك، وبيوصله إيميل بالتفعيل.' : 'الحساب الساري يتمدّد من تاريخ انتهائه.') + '</p>' +
+    '<div class="sub-opts">' + SUB_OPTS.map(function (o) { return '<button class="chip" data-act="subSet" data-id="' + id + '" data-days="' + o[0] + '">' + o[1] + '</button>'; }).join('') +
+    '<button class="chip" data-act="subSet" data-id="' + id + '" data-forever="1">' + ic('infinity') + ' حساب ثابت</button></div>' +
+    '<div class="row" style="gap:8px;margin-top:12px"><input id="subDays" inputmode="numeric" maxlength="4" placeholder="أو اكتب عدد الأيام" style="flex:1"><button class="btn sm" data-act="subSet" data-id="' + id + '" data-custom="1">اعتمد</button></div>';
+}
 function loadAdmin() {
   call('adminList').then(function (r) { S.admin = r; if (S.route === 'admin') render(); }).catch(function (e) { toast(e.message); });
 }
@@ -3571,7 +3917,16 @@ var ACT = {
       return openSheet('<h2>عندك تمرين شغّال</h2><p class="mut">تبي تكمّل تمرينك الحالي ولا تبدأ جديد؟ لو بدأت جديد، الحالي بينحذف.</p>' +
         '<button class="btn" data-act="resume">كمّل الحالي</button><button class="btn dark text-danger" data-act="startNew" data-day="' + id + '">ابدأ جديد</button>');
     }
-    beginDay(day);
+    // v3.2 (A5): فحص الجاهزية قبل الجلسة (اختياري ويتخطّاه)
+    if (!el.dataset.go && !LS.get('readyOff', 0)) { S.rd = { day: id }; return openSheet(readyHtml()); }
+    beginDay(day); applyReady(el.dataset.go === 'skip' ? null : S.rd);
+  },
+  rdPick: function (el) { if (!S.rd) return; S.rd[el.dataset.k] = el.dataset.v; openSheet(readyHtml()); },
+  rdGo: function (el) {
+    var skip = el.dataset.skip === '1';
+    if ($('rdOff') && $('rdOff').checked) LS.set('readyOff', 1);
+    closeSheet();
+    ACT.startDay({ dataset: { day: S.rd.day, go: skip ? 'skip' : '1' } });
   },
   startNew: function (el) {
     closeSheet(); S.draft = null;
@@ -3662,6 +4017,7 @@ var ACT = {
     d.items.forEach(function (it, i) {
       var n = 0, m = (c.miss || {})[i];
       it.rows.forEach(function (r) { if (r.done) sets.push({ exId: it.exId, exName: it.name, setNo: ++n, w: +r.w || 0, r: +r.r || 0, wu: !!r.wu }); });
+      if (it.rir != null) { for (var q = sets.length - 1; q >= 0 && sets[q].exId === it.exId; q--) if (!sets[q].wu) { sets[q].rir = it.rir; break; } } // v3.2 (A4)
       if (!n && m && m.ok) m.rows.forEach(function (r) { sets.push({ exId: it.exId, exName: it.name, setNo: ++n, w: +r.w || 0, r: +r.r || 0, wu: !!r.wu, late: true }); });
     });
     var payload = { id: d.id, date: d.date, dayId: d.dayId, dayName: d.dayName, startedAt: d.startedAt, duration: c.dur, sets: sets };
@@ -3716,6 +4072,7 @@ var ACT = {
     d.items.forEach(function (it) {
       var n = 0;
       it.rows.forEach(function (r) { if (r.done) sets.push({ exId: it.exId, exName: it.name, setNo: ++n, w: +r.w || 0, r: +r.r || 0, wu: !!r.wu }); });
+      if (it.rir != null) { for (var q = sets.length - 1; q >= 0 && sets[q].exId === it.exId; q--) if (!sets[q].wu) { sets[q].rir = it.rir; break; } } // v3.2 (A4)
     });
     if (!sets.length) { S.draft = null; LS.del('draft'); go('home', {}, { root: true }); return toast('ما سجّلت أي مجموعة، تم إلغاء الجلسة'); }
     var tips = buildTips(d.items);
@@ -3880,6 +4237,35 @@ var ACT = {
   },
   adminReload: function () { S.admin = null; render(); },
   adminF: function (el) { S.adminF = el.dataset.v; render(); },
+  setRir: function (el) { var it = S.draft.items[S.draft.cur], v = +el.dataset.v; it.rir = it.rir === v ? null : v; saveDraft(); render(); },
+  // v3.2 (A9): «الجهاز مشغول»: نفس الحركة بأدوات يملكها، والتبديل لهالجلسة بس
+  busyAsk: function (el) {
+    var i = +el.dataset.i, it = S.draft.items[i], tools = (S.boot.settings || {}).tools || ['machine', 'cable', 'dumbbell', 'barbell'];
+    var lib = {}; Object.keys(S.ex).forEach(function (k) { lib[k] = S.ex[k]; });
+    var used = S.draft.items.map(function (x) { return x.exId; });
+    var al = Calc.sameMove(it.exId, lib).filter(function (x) { var t = x.tool; return (t === 'bodyweight' || tools.indexOf(t) >= 0) && used.indexOf(x.ex) < 0; });
+    openSheet('<h3 style="margin:0 0 4px">الجهاز مشغول؟</h3><p class="xs mut" style="margin:0 0 10px">هذي نفس الحركة بأدواتك. التبديل لهالجلسة بس، وبرنامجك ما يتغيّر.</p>' +
+      (al.length ? '<div class="col">' + al.slice(0, 8).map(function (x) { var e = S.ex[x.ex]; return '<button class="list-item" data-act="swapEx" data-ctx="sess" data-i="' + i + '" data-id="' + esc(x.ex) + '">' + thumb(e) + '<div class="grow"><div class="en b ell" style="text-align:right">' + esc(e.name) + '</div><div class="xs mut">' + (Calc.TOOL_AR[x.tool] || '') + '</div></div></button>'; }).join('') + '</div>'
+        : '<div class="card center mut">ما فيه بديل لنفس الحركة بأدواتك. جرّب «بديل» تشوف كل الخيارات.</div>') +
+      '<button class="btn dark" data-act="closeSheet" style="margin-top:10px">أنتظر الجهاز</button>');
+  },
+  kcalYes: function (el) {
+    var st = S.boot.settings || {}, adj = Math.max(-500, Math.min(500, (+st.kcalAdj || 0) + +el.dataset.d));
+    saveSettingsLocal({ kcalAdj: adj, kcalWk: Calc.weekStart(ymd()) }); render();
+    var h = homeModel(); toast('تم ✅ سعراتك الحين ' + fmtN(h && h.food ? h.food.kcal : 0));
+  },
+  kcalNo: function () { saveSettingsLocal({ kcalWk: Calc.weekStart(ymd()) }); render(); },
+  ramToggle: function (el) { var on = !!el.checked; saveSettingsLocal({ ramadan: on ? 1 : 0, iftar: +(S.boot.settings || {}).iftar || 18 }); render(); toast(on ? 'وضع رمضان شغّال 🌙' : 'رجعنا للوضع العادي'); },
+  ramIftar: function (el) { saveSettingsLocal({ iftar: +el.dataset.v }); render(); },
+  setTheme: function (el) { var t = el.dataset.v; LS.set('theme', t); saveSettingsLocal({ theme: t }); render(); toast('تم ✅ ' + THEMES.filter(function (x) { return x[0] === t; })[0][1]); },
+  subSheet: function (el) { openSheet(subSheetHtml(el.dataset.id, el.dataset.name, !!el.dataset.new)); },
+  subSet: function (el) {
+    var p = { id: el.dataset.id };
+    if (el.dataset.forever) p.forever = true;
+    else if (el.dataset.custom) { p.days = +($('subDays') || {}).value; if (!(p.days >= 1 && p.days <= 3650)) return toast('اكتب عدد أيام من 1 إلى 3650'); }
+    else p.days = +el.dataset.days;
+    call('adminSetSub', p).then(function (r) { S.admin = r; closeSheet(); render(); toast(p.forever ? 'صار حساب ثابت ✅' : 'تم ✅ ' + (p.days) + ' يوم'); }).catch(function (e) { toast(e.message); });
+  },
   adminApprove: function (el) { call('adminApprove', { id: el.dataset.id }).then(function (r) { S.admin = r; render(); toast('تم تفعيل الحساب ✅'); }).catch(function (e) { toast(e.message); }); },
   adminSuspend: function (el) { confirmSheet('إيقاف الحساب؟', 'المستخدم ما بيقدر يدخل لين تفعّله من جديد. بياناته تبقى محفوظة.', 'إيقاف', 'adminSuspendYes', 'data-id="' + el.dataset.id + '"', true); },
   adminSuspendYes: function (el) { closeSheet(); call('adminSuspend', { id: el.dataset.id }).then(function (r) { S.admin = r; render(); toast('تم الإيقاف'); }).catch(function (e) { toast(e.message); }); },
@@ -3920,6 +4306,22 @@ function doSwap(ctx, i, id) {
   toast('تم التبديل إلى ' + e.name);
 }
 
+/** v3.2 (A8): الإحماء التلقائي قبل أول تمرين مركّب ثقيل (إذا ما عنده إحماء مسجّل لهالتمرين) */
+function addAutoWarmup(d) {
+  if (LS.get('autoWuOff', 0)) return;
+  for (var i = 0; i < d.items.length; i++) {
+    var it = d.items[i], e = exOf(it.exId);
+    if (e.type !== 'compound' || e.equip === 'bodyweight' || isTime(e)) continue;
+    var sg = sugFor(it).filter(function (x, k) { return x && !it.rows[k].wu; })[0];
+    if (!sg || !(+sg.w >= 20)) continue;
+    if (it.rows.some(function (r) { return r.wu; })) return; // يسجّل إحماءه بنفسه
+    var wu = Calc.warmup(+sg.w, e, it.target);
+    if (!wu.length) return;
+    it.rows = wu.map(function (x) { return { w: '', r: '', wu: true, done: false, aw: x.w, ar: x.r }; }).concat(it.rows);
+    it.autoWu = 1;
+    return;
+  }
+}
 function beginDay(day) {
   // المبتدئ أول أسبوعين: مجموعة أقل في العزل (للجلسة بس، البرنامج ما يتغيّر)
   var beg = isBeginner();
@@ -3932,6 +4334,7 @@ function beginDay(day) {
     orig: its.map(function (it) { return { ex: it.ex, sets: +it.sets, min: +it.min, max: +it.max }; }),
     items: its.map(function (it) { return sessItem(it.ex, it); })
   };
+  addAutoWarmup(S.draft);
   saveDraft();
   schedForgot();
   // v3.1 (U3): «ابدأ التمرين» يدخل على أول تمرين مباشرة. القائمة من زر «التمارين» فوق
@@ -3956,6 +4359,42 @@ document.addEventListener('click', function (e) {
   var fn = ACT[el.dataset.act];
   if (fn) { e.preventDefault(); fn(el, e); }
 });
+/* v3.2 (A2): السحب يمين أو يسار على رقم الوزن أو العدّات يعدّله. كل 22 بكسل = خطوة (الوزن بمقدار الزيادة، والعدّات 1).
+   اليمين يزيد واليسار ينقص. الضغطة بدون سحب تفتح الكيبورد عادي */
+var SWP = null;
+function swpStep(el) {
+  if (el.dataset.bind === 'rowR') return 1;
+  var it = S.draft && S.draft.items[S.draft.cur]; if (!it) return 2.5;
+  var e = exOf(it.exId), base = +el.value || +el.placeholder || 0;
+  return Calc.inc(e, it.target, base);
+}
+document.addEventListener('pointerdown', function (e) {
+  var el = e.target;
+  if (!el || !el.dataset || (el.dataset.bind !== 'rowW' && el.dataset.bind !== 'rowR')) return;
+  var v = el.value !== '' ? +el.value : (+el.placeholder || 0);
+  SWP = { el: el, x: e.clientX, y: e.clientY, v0: isNaN(v) ? 0 : v, step: swpStep(el), moved: false, id: e.pointerId };
+}, { passive: true });
+document.addEventListener('pointermove', function (e) {
+  if (!SWP || e.pointerId !== SWP.id) return;
+  var dx = e.clientX - SWP.x, dy = e.clientY - SWP.y;
+  if (!SWP.moved && (Math.abs(dx) < 10 || Math.abs(dy) > Math.abs(dx))) return;
+  SWP.moved = true;
+  var n = Math.round(dx / 22), v = Math.max(0, Math.round((SWP.v0 + n * SWP.step) * 100) / 100);
+  if (SWP.el.dataset.bind === 'rowR') v = Math.max(1, Math.round(v));
+  if (String(v) !== SWP.el.value) {
+    SWP.el.value = String(v); SWP.el.classList.add('swp-on');
+    var it = S.draft && S.draft.items[S.draft.cur], r = it && it.rows[+SWP.el.dataset.row];
+    if (r) r[SWP.el.dataset.bind === 'rowW' ? 'w' : 'r'] = String(v);
+    if (navigator.vibrate) try { navigator.vibrate(6); } catch (x) {}
+  }
+});
+function swpEnd(e) {
+  if (!SWP) return;
+  var s = SWP; SWP = null;
+  if (s.moved) { s.el.classList.remove('swp-on'); s.el.blur(); LS.set('swpTip', 1); saveDraft(); if (e && e.cancelable) e.preventDefault(); }
+}
+document.addEventListener('pointerup', swpEnd);
+document.addEventListener('pointercancel', swpEnd);
 document.addEventListener('change', function (e) {
   var el = e.target;
   if (el && el.dataset && el.dataset.pref) { var o = {}; o[el.dataset.pref] = +el.value; savePrefs(o, 'تم الحفظ'); }
@@ -4004,10 +4443,17 @@ function draftRoute() {
   if (!S.draft && !S.af) { var af = LS.get('af', null); if (af && af.ctx === 'solo' && af.start && Date.now() - af.start < 6 * 3600e3) S.af = af; }
   return S.draft ? (S.draft.confirm ? 'confirm' : 'session') : S.af && S.af.start ? 'activity' : needsOnboard() ? 'onboard' : 'home';
 }
+function resumeToast() {
+  if (S.resumed) return; S.resumed = 1;
+  var d = S.draft, it = d && d.items[d.cur]; if (!it) return;
+  var k = 0; it.rows.some(function (r, i) { k = i; return !r.done; });
+  setTimeout(function () { toast('كمّلنا من حيث وقفت: ' + exOf(it.exId).name + ' · المجموعة ' + (k + 1)); }, 300);
+}
 function start() {
   render();
   if (!S.token) { setTimeout(function () { go('welcome', {}, { root: true }); }, 900); return; }
-  if (S.boot) go(draftRoute(), S.draft && !S.draft.confirm ? { view: 'list' } : {}, { root: true });
+  // v3.2 (A3): كمّل من حيث وقفت: يرجع لنفس التمرين ونفس المجموعة
+  if (S.boot) { go(draftRoute(), {}, { root: true }); if (S.draft && !S.draft.confirm) resumeToast(); }
   var q = S.queue.length ? flushQueue() : Promise.resolve();
   q.catch(function () {}).then(function () { return call('bootstrap', { etag: S.raw && S.raw.etag || '' }, { quiet: !!S.boot }); }).then(function (b) {
     setBoot(b);
@@ -4017,7 +4463,7 @@ function start() {
       try { history.replaceState(null, '', location.pathname); } catch (x) {}
       if (hr === 'admin' && b.user.role !== 'admin') hr = 'home';
       go(hr, {}, { root: ['progress'].indexOf(hr) >= 0 });
-    } else if (S.route === 'splash') go(draftRoute(), S.draft && !S.draft.confirm ? { view: 'list' } : {}, { root: true });
+    } else if (S.route === 'splash') { go(draftRoute(), {}, { root: true }); if (S.draft && !S.draft.confirm) resumeToast(); }
     else if (S.route === 'home' && needsOnboard()) go('onboard', {}, { root: true });
     else if (['home', 'program', 'progress', 'more'].indexOf(S.route) >= 0) render();
   }).catch(function (e) {
